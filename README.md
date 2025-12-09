@@ -1,125 +1,125 @@
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=1A73E8&center=true&vCenter=true&width=700&lines=Hi+there,+I'm+Mohamed+Ibrahim+Abdi+👋;Software+Developer+|+AI+%26+NLP+Researcher;Full+Stack+Engineer+|+Deep+Learning+Enthusiast" />
-</p>
+# Mohamed Ibrahim Abdi (Mohamed-Qadar)
+
+Software Developer · AI Researcher  
+Full‑Stack Web Development · Deep Learning · NLP · Intelligent Systems
 
 ---
 
-## 🧑‍💻 About Me
-I am a **Software Developer** and **Artificial Intelligence Researcher** with strong experience in  
-**Full-Stack Web Development, Deep Learning, NLP, and Intelligent Systems**.
+## About Me
+I am a Software Developer and Artificial Intelligence researcher with practical experience building production web platforms and applying deep learning to real-world problems. My strengths include end-to-end product development, machine learning research, and delivering maintainable, well‑tested code.
 
-I hold:
-- 🎓 **M.Sc. in Computer Engineering** (Fırat University)  
-- 🎓 **B.Sc. in Computer Engineering** (Karadeniz Technical University)
+Education
+- M.Sc., Computer Engineering — Fırat University
+- B.Sc., Computer Engineering — Karadeniz Technical University
 
-My research interests include:
+Research interests
 - Natural Language Processing (T5, BERT, LLaMA, mT5)
-- Deepfake Detection (ResNeXt, LSTM)
-- Image Processing with CNNs
-- AI in Education & Document Understanding
+- Deepfake detection and multimedia forensics (ResNeXt, LSTM)
+- Multi‑modal document understanding and agent systems
+- Image processing and CNNs
+- AI for education and public health
 
 ---
 
-## 🔗 Connect With Me
-<p align="left">
-  <a href="mailto:mohamedqadar280@gmail.com"><img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=gmail&logoColor=white"></a>
-  <a href="https://tr.linkedin.com/in/mohamed-ibrahim-abdi-572475232"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-  <a href="https://github.com/Mohamed-Qadar"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"></a>
-</p>
+## Contact
+<a href="mailto:mohamedqadar280@gmail.com"><img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+<a href="https://tr.linkedin.com/in/mohamed-ibrahim-abdi-572475232"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+<a href="https://github.com/Mohamed-Qadar"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
 
 ---
 
-# 🚀 Featured Projects
+## 🚀 Featured Projects
 
-### 🔹 **Digital Accounting Platform (SaaS)**
-**Frontend Developer — ReactJS + TailwindCSS**  
-Built a platform for small businesses & NGOs with 16+ PDF report templates.  
-📌 *Instant report generation, modern UI, template system.*
+### Digital Accounting Platform — Frontend Developer
+Technologies: ReactJS, TailwindCSS  
+Built a digital accounting SaaS for small businesses, NGOs, and freelancers that generates instant professional PDF reports from 16+ customizable templates. Focused on simplifying financial documentation with an intuitive, modern interface and a template-driven reporting engine for fast, repeatable exports.
 
----
+### HealthLink Somalia — Full Stack Developer
+Technologies: Django, HTML, CSS, JavaScript, Bootstrap  
+Developed a multilingual public health information platform for Somalia with article management, academic resource sharing, and role-based content administration for medical contributors. Emphasized accessibility, content moderation workflows, and scalable article distribution.
 
-### 🔹 **Humanitarian Aid & Kurban Management Platform**
-**Django + Bootstrap + PostgreSQL**  
-Full management system for donation tracking, volunteers, animals, and multilingual support.
+### Kurban Organization Management Web Application — Full Stack Developer
+Technologies: Django, HTML, CSS, JavaScript, Bootstrap  
+Delivered a full-stack platform for managing sacrificial animal distribution and humanitarian aid operations. Implemented donation tracking, volunteer coordination, multilingual support, and transparent reporting to improve accountability and logistics.
 
----
+### Electrical System Management Platform — Full Stack Developer
+Technologies: Django (backend), Django REST Framework, Vue.js 3 (frontend)  
+Built a real-time electrical system monitoring and management platform to support engineers in analyzing and visualizing system parameters. Implemented modular REST APIs, interactive dashboards, and data visualizations for voltage, current, and load metrics to enhance operational efficiency.
 
-### 🔹 **HealthLink Somalia**
-**Full Stack Developer — Django**  
-A public health portal with multilingual medical articles and educational resources.
+### Extractive & Abstractive Summarization for Somali — Research & Implementation
+Technologies: Transformers, custom preprocessing pipelines  
+Designed and implemented extractive and abstractive summarization models tailored to the Somali language, including dataset preprocessing, model fine-tuning, and evaluation metrics for low-resource NLP scenarios.
 
----
+### Image Classification using CNN — Research & Development
+Technologies: PyTorch / TensorFlow, CNN architectures  
+Applied convolutional neural networks to multiple image datasets, experimenting with transfer learning, data augmentation, and model optimization for classification tasks.
 
-### 🔹 **Somali Public Health Website**
-Live Website: **https://www.gacanwallal.org/en/**  
-Designed and developed a high-impact health awareness website for local communities.
+### Data Analysis — Starbucks Nutrition Facts (Kaggle)
+Technologies: Pandas, Matplotlib, Seaborn  
+Performed data cleaning, exploratory analysis, visualization, and statistical summaries on the Starbucks Nutrition Facts dataset to derive actionable insights and reporting visualizations.
 
----
+### MDocAgent — Multi‑Modal Multi‑Agent Framework for Document Understanding
+Research project focused on architecting a multi-agent system for document parsing, multimodal reasoning, and information extraction across heterogeneous document types.
 
-# 🧠 AI & Research Projects
+### Deepfake Video Detection — Research Project
+Technologies: ResNeXt50, LSTM, temporal feature aggregation  
+Proposed and evaluated a hybrid architecture combining ResNeXt50 for spatial feature extraction and LSTM for temporal modeling to detect manipulated video content.
 
-### 🔸 Deepfake Video Detection (ResNeXt50 + LSTM)
-Proposed a hybrid model combining spatial + temporal deep learning.
-
-### 🔸 Somali Text Summarization (Extractive & Abstractive)
-Built the first summarization prototype for the Somali language.
-
-### 🔸 MDocAgent — Multi-Modal Document AI
-A multi-agent framework for document understanding.
-
-### 🔸 CNN Image Classification
-Worked on multiple datasets for academic and applied tasks.
-
----
-
-# 📚 Publications
-
-### 📝 J.1 — Facial Expression Based Emotion Recognition  
-Journal of Electrical Engineering and Computer (JEECOM)  
-https://doi.org/10.33650/jeecom.v7i1.11069
-
-### 📝 J.2 — Deepfake Video Detection Using ResNeXt + LSTM  
-Politeknik Dergisi  
-https://doi.org/10.2339/politeknik.1721371
+### Text Extraction from Images — Hybrid Deep Learning
+Combined CNN-based visual feature extraction with OCR components to robustly extract text from complex, real-world images and multi-layout documents.
 
 ---
 
-# 🛠️ Technologies & Tools
+## 🎓 Undergraduate & Academic Projects
 
-### **Programming Languages**
-<p>
-  <img src="https://skillicons.dev/icons?i=python,cpp,cs,php,kotlin" />
-</p>
+- Real Estate Platform — C#, ASP.NET Core 8.0, Dapper, SQL Server, SignalR  
+  Three-tier platform (Admin, Agent, API) with real-time features using SignalR and performant data access via Dapper.
 
-### **Web Development**
-<p>
-  <img src="https://skillicons.dev/icons?i=django,react,html,css,js,bootstrap,tailwind" />
-</p>
+- Automata Theory Tools — Python (GUI)  
+  GUI application to convert Regular Expressions (RE) into NFA and DFA; includes visualization and step-by-step conversion tools.
 
-### **Databases**
-<p>
-  <img src="https://skillicons.dev/icons?i=postgres,mysql,mssql" />
-</p>
+- Responsive Web Project — HTML, CSS, JavaScript  
+  Designed and deployed a responsive informational website as part of coursework.
 
-### **AI/ML Tools**
-<p>
-  <img src="https://skillicons.dev/icons?i=tensorflow,pytorch" />
-</p>
+- Telephone Exchange Circuit — VHDL  
+  Implemented a digital circuit simulating basic telephone central exchange operations.
 
-### **DevOps / Cloud**
-<p>
-  <img src="https://skillicons.dev/icons?i=aws,azure,git,github" />
-</p>
+- Employee Health Status Tracking (COVID-19) — PostgreSQL, Python  
+  Database system for storing and managing employee health records and reporting.
+
+- Weather App & Team Projects — Python, Tkinter; Socket Programming  
+  Built a desktop weather app and participated in team projects including a socket-based messaging application and simple games.
 
 ---
 
-# 📈 GitHub Stats
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mohamed-Qadar&theme=tokyonight" width="50%">
-</p>
+## AI / ML Tools & Technical Skills
+
+- Programming: Python, C++, C#, PHP, Kotlin  
+- Web: Django, React, Vue.js, HTML, CSS, JavaScript, Bootstrap, Tailwind  
+- Databases: PostgreSQL, MySQL, MSSQL, SQL Server  
+- ML: PyTorch, TensorFlow, Transformers, CNNs, LSTMs  
+- DevOps: AWS, Azure, Git, GitHub
 
 ---
 
-# ✨ Thank You for Visiting!
-If you like my work, feel free to ⭐ my repositories or connect with me!
+## Publications
 
+- Facial Expression Based Emotion Recognition — Journal of Electrical Engineering and Computer (JEECOM)  
+  https://doi.org/10.33650/jeecom.v7i1.11069
+
+- Deepfake Video Detection Using ResNeXt + LSTM — Politeknik Dergisi  
+  https://doi.org/10.2339/politeknik.1721371
+
+---
+
+## How I Work
+- Emphasize readable, testable code and reproducible experiments
+- Prefer iterative delivery with clear milestones and demos
+- Combine research rigour with pragmatic engineering to ship features
+
+---
+
+If you want, I can:
+- translate the README to Turkish,
+- add links/screenshots for specific projects,
+- or open a PR with this updated README in your repository.
