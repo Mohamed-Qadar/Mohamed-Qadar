@@ -220,7 +220,10 @@ Data cleaning, visualization & statistical reporting.
   https://doi.org/10.2339/politeknik.1721371
 
 ---
-
+## GitHub Activity
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mohamed-Qadar&theme=tokyonight" width="50%" alt="GitHub streak">
+</p>
 
 
 <p align="center">
