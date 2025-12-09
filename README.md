@@ -1,125 +1,178 @@
+<!-- Banner -->
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=1A73E8&center=true&vCenter=true&width=800&lines=Hi+there,+I'm+Mohamed+Ibrahim+Abdi+👋;Software+Developer+|+AI+%26+NLP+Researcher;Full+Stack+Engineer+|+Deep+Learning+Enthusiast" />
+</p>
+
 # Mohamed Ibrahim Abdi (Mohamed-Qadar)
 
 Software Developer · AI Researcher  
-Full‑Stack Web Development · Deep Learning · NLP · Intelligent Systems
+Full-Stack Web Development · Deep Learning · NLP · Intelligent Systems
 
 ---
 
-## About Me
-I am a Software Developer and Artificial Intelligence researcher with practical experience building production web platforms and applying deep learning to real-world problems. My strengths include end-to-end product development, machine learning research, and delivering maintainable, well‑tested code.
+## 🧑‍💻 About Me
+I am a Software Developer and Artificial Intelligence Researcher with practical experience in full-stack web development, machine learning, and deep learning applications. I focus on building scalable systems and conducting applied AI research, especially in low-resource NLP, video analysis, OCR, and document intelligence.
 
-Education
-- M.Sc., Computer Engineering — Fırat University
-- B.Sc., Computer Engineering — Karadeniz Technical University
+### 🎓 Education
+- **M.Sc., Computer Engineering — Fırat University**  
+- **B.Sc., Computer Engineering — Karadeniz Technical University**
 
-Research interests
+### 🔬 Research Interests
 - Natural Language Processing (T5, BERT, LLaMA, mT5)
-- Deepfake detection and multimedia forensics (ResNeXt, LSTM)
-- Multi‑modal document understanding and agent systems
-- Image processing and CNNs
-- AI for education and public health
+- Deepfake Detection (ResNeXt, LSTM)
+- Multi-Modal Document Understanding (OCR + NLP + Vision)
+- Image Processing with CNNs
+- AI for Education & Public Health
 
 ---
 
-## Contact
-<a href="mailto:mohamedqadar280@gmail.com"><img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
-<a href="https://tr.linkedin.com/in/mohamed-ibrahim-abdi-572475232"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-<a href="https://github.com/Mohamed-Qadar"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+## 📬 Contact
+<a href="mailto:mohamedqadar280@gmail.com"><img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+<a href="https://tr.linkedin.com/in/mohamed-ibrahim-abdi-572475232"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="https://github.com/Mohamed-Qadar"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 
 ---
 
-## 🚀 Featured Projects
+# 🚀 Featured Projects
 
-### Digital Accounting Platform — Frontend Developer
-Technologies: ReactJS, TailwindCSS  
-Built a digital accounting SaaS for small businesses, NGOs, and freelancers that generates instant professional PDF reports from 16+ customizable templates. Focused on simplifying financial documentation with an intuitive, modern interface and a template-driven reporting engine for fast, repeatable exports.
-
-### HealthLink Somalia — Full Stack Developer
-Technologies: Django, HTML, CSS, JavaScript, Bootstrap  
-Developed a multilingual public health information platform for Somalia with article management, academic resource sharing, and role-based content administration for medical contributors. Emphasized accessibility, content moderation workflows, and scalable article distribution.
-
-### Kurban Organization Management Web Application — Full Stack Developer
-Technologies: Django, HTML, CSS, JavaScript, Bootstrap  
-Delivered a full-stack platform for managing sacrificial animal distribution and humanitarian aid operations. Implemented donation tracking, volunteer coordination, multilingual support, and transparent reporting to improve accountability and logistics.
-
-### Electrical System Management Platform — Full Stack Developer
-Technologies: Django (backend), Django REST Framework, Vue.js 3 (frontend)  
-Built a real-time electrical system monitoring and management platform to support engineers in analyzing and visualizing system parameters. Implemented modular REST APIs, interactive dashboards, and data visualizations for voltage, current, and load metrics to enhance operational efficiency.
-
-### Extractive & Abstractive Summarization for Somali — Research & Implementation
-Technologies: Transformers, custom preprocessing pipelines  
-Designed and implemented extractive and abstractive summarization models tailored to the Somali language, including dataset preprocessing, model fine-tuning, and evaluation metrics for low-resource NLP scenarios.
-
-### Image Classification using CNN — Research & Development
-Technologies: PyTorch / TensorFlow, CNN architectures  
-Applied convolutional neural networks to multiple image datasets, experimenting with transfer learning, data augmentation, and model optimization for classification tasks.
-
-### Data Analysis — Starbucks Nutrition Facts (Kaggle)
-Technologies: Pandas, Matplotlib, Seaborn  
-Performed data cleaning, exploratory analysis, visualization, and statistical summaries on the Starbucks Nutrition Facts dataset to derive actionable insights and reporting visualizations.
-
-### MDocAgent — Multi‑Modal Multi‑Agent Framework for Document Understanding
-Research project focused on architecting a multi-agent system for document parsing, multimodal reasoning, and information extraction across heterogeneous document types.
-
-### Deepfake Video Detection — Research Project
-Technologies: ResNeXt50, LSTM, temporal feature aggregation  
-Proposed and evaluated a hybrid architecture combining ResNeXt50 for spatial feature extraction and LSTM for temporal modeling to detect manipulated video content.
-
-### Text Extraction from Images — Hybrid Deep Learning
-Combined CNN-based visual feature extraction with OCR components to robustly extract text from complex, real-world images and multi-layout documents.
+## ⭐ Digital Accounting Platform (SaaS)
+**Frontend Developer — ReactJS, TailwindCSS**  
+A modern digital accounting tool for small businesses, NGOs, and freelancers.  
+- 16+ customizable PDF report templates  
+- Template-driven export engine  
+- Clean and intuitive SaaS dashboard  
+**Tech:** ReactJS, TailwindCSS
 
 ---
 
-## 🎓 Undergraduate & Academic Projects
-
-- Real Estate Platform — C#, ASP.NET Core 8.0, Dapper, SQL Server, SignalR  
-  Three-tier platform (Admin, Agent, API) with real-time features using SignalR and performant data access via Dapper.
-
-- Automata Theory Tools — Python (GUI)  
-  GUI application to convert Regular Expressions (RE) into NFA and DFA; includes visualization and step-by-step conversion tools.
-
-- Responsive Web Project — HTML, CSS, JavaScript  
-  Designed and deployed a responsive informational website as part of coursework.
-
-- Telephone Exchange Circuit — VHDL  
-  Implemented a digital circuit simulating basic telephone central exchange operations.
-
-- Employee Health Status Tracking (COVID-19) — PostgreSQL, Python  
-  Database system for storing and managing employee health records and reporting.
-
-- Weather App & Team Projects — Python, Tkinter; Socket Programming  
-  Built a desktop weather app and participated in team projects including a socket-based messaging application and simple games.
+## ⭐ HealthLink Somalia — Public Health Platform
+**Full Stack Developer — Django**  
+Multilingual health information portal for medical professionals and the public.  
+- Article management system  
+- Academic resource library  
+- Admin dashboards for content review  
+**Tech:** Django, Bootstrap, HTML, JavaScript
 
 ---
 
-## AI / ML Tools & Technical Skills
-
-- Programming: Python, C++, C#, PHP, Kotlin  
-- Web: Django, React, Vue.js, HTML, CSS, JavaScript, Bootstrap, Tailwind  
-- Databases: PostgreSQL, MySQL, MSSQL, SQL Server  
-- ML: PyTorch, TensorFlow, Transformers, CNNs, LSTMs  
-- DevOps: AWS, Azure, Git, GitHub
+## ⭐ Kurban Organization Management System
+**Full Stack Developer — Django**  
+Humanitarian aid platform for donation tracking and sacrificial operation management.  
+- Volunteer coordination  
+- Multilingual support  
+- Transparent reporting dashboards  
+**Tech:** Django, PostgreSQL, JavaScript, Bootstrap
 
 ---
 
-## Publications
+## ⭐ Electrical System Management Platform
+**Full Stack Developer — Django REST + Vue.js 3**  
+Real-time electrical monitoring & visualization system.  
+- Modular REST APIs  
+- Voltage/current/load analytics  
+- Interactive engineering dashboards  
+**Tech:** Django REST Framework, Vue.js 3, Chart.js
 
-- Facial Expression Based Emotion Recognition — Journal of Electrical Engineering and Computer (JEECOM)  
+---
+
+## ⭐ Somali Language Summarization (Extractive + Abstractive)
+**NLP Research Project**  
+Developed summarization models for a low-resource language.  
+- Transformer-based models  
+- Custom preprocessing pipeline  
+**Tech:** Transformers, Python
+
+---
+
+## ⭐ Deepfake Video Detection
+**AI Research — Published**  
+Hybrid architecture combining ResNeXt50 + LSTM.  
+- Spatial + temporal feature extraction  
+- Deepfake classification  
+**Tech:** PyTorch, ResNeXt50, LSTM
+
+---
+
+## ⭐ MDocAgent — Multi-Modal Multi-Agent Document AI
+Multi-agent system for document parsing and multimodal reasoning.  
+**Tech:** Python, Transformers, OCR Engines
+
+---
+
+## ⭐ Image Classification using CNN
+Built CNN-based image classification pipelines on multiple datasets.  
+**Tech:** TensorFlow, PyTorch
+
+---
+
+## ⭐ Data Analysis — Starbucks Nutrition Dataset
+Data cleaning, visualization & statistical reporting.  
+**Tech:** Pandas, Matplotlib
+
+---
+
+# 🎓 Undergraduate Projects
+
+- **Real Estate Platform — ASP.NET Core 8.0, Dapper, SQL Server, SignalR**  
+  Three-tier architecture (Admin, Agent, API) with real-time communication.
+
+- **Automata Tools — Python GUI**  
+  RE → NFA → DFA conversion tool with interactive visualization.
+
+- **Responsive Website — HTML, CSS, JS**  
+  Fully responsive informational site.
+
+- **Telephone Exchange Circuit — VHDL**  
+  Digital simulation of basic telephone central operations.
+
+- **COVID-19 Employee Health Tracking — PostgreSQL + Python**  
+  Health record management system.
+
+- **Python Projects — Weather App, Console Games, Socket Messaging App**
+
+---
+
+# 🛠️ Technical Skills
+
+## 🧩 Programming Languages
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=python,cpp,cs,php,kotlin" height="45" />
+</p>
+
+## 🌐 Web Development
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=django,react,vue,html,css,js,bootstrap,tailwind" height="45" />
+</p>
+
+## 🗄️ Databases
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=postgres,mysql,mssql" height="45" />
+</p>
+
+## 🧠 AI & Machine Learning
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow" height="45" />
+</p>
+
+## ☁️ Cloud & DevOps
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=aws,azure,git,github" height="45" />
+</p>
+
+---
+
+# 📚 Publications
+
+- **Facial Expression Based Emotion Recognition** — JEECOM  
   https://doi.org/10.33650/jeecom.v7i1.11069
 
-- Deepfake Video Detection Using ResNeXt + LSTM — Politeknik Dergisi  
+- **Deepfake Video Detection Using ResNeXt + LSTM** — Politeknik Dergisi  
   https://doi.org/10.2339/politeknik.1721371
 
 ---
 
-## How I Work
-- Emphasize readable, testable code and reproducible experiments
-- Prefer iterative delivery with clear milestones and demos
-- Combine research rigour with pragmatic engineering to ship features
 
----
 
-If you want, I can:
-- translate the README to Turkish,
-- add links/screenshots for specific projects,
-- or open a PR with this updated README in your repository.
+<p align="center">
+  <b>Thank you for visiting my profile! 🚀</b>
+</p>
