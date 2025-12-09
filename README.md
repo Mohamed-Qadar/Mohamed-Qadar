@@ -3,11 +3,7 @@
   <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=1A73E8&center=true&vCenter=true&width=800&lines=Hi+there,+I'm+Mohamed+Ibrahim+Abdi+👋;Software+Developer+|+AI+%26+NLP+Researcher;Full+Stack+Engineer+|+Deep+Learning+Enthusiast" />
 </p>
 
-# Mohamed Ibrahim Abdi (Mohamed-Qadar)
-
-Software Developer · AI Researcher  
-Full-Stack Web Development · Deep Learning · NLP · Intelligent Systems
-
+# Mohamed Ibrahim Abdi
 ---
 
 ## 🧑‍💻 About Me
