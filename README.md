@@ -9,6 +9,42 @@
 ## 🧑‍💻 About Me
 I am a Software Developer and Artificial Intelligence Researcher with practical experience in full-stack web development, machine learning, and deep learning applications. I focus on building scalable systems and conducting applied AI research, especially in low-resource NLP, video analysis, OCR, and document intelligence.
 
+
+
+# 💼 Experience
+
+##  Elasoft — Software Developer Intern  
+**Trabzon, Türkiye | January 2024 – May 2024**  
+**Tech:** ASP.NET Core 8.0, C#, Dapper, SQL Server, SignalR, HTML/CSS/JS, Bootstrap
+
+Worked as a backend-focused Software Developer Intern, contributing to a production-level real estate management platform.
+
+**Key Contributions:**
+- Developed core backend features using **ASP.NET Core API 8.0** and **Dapper**.
+- Designed a **three-layer architecture** with Admin Panel, Agent Panel, and Client UI modules.
+- Implemented RESTful API endpoints connecting backend and frontend layers.
+- Integrated **SignalR** for real-time messaging between agents and users.
+- Built frontend components using HTML, CSS, JavaScript, and Bootstrap.
+- Optimized SQL queries and data processing pipelines using Microsoft SQL Server.
+
+---
+
+##  Online Instructor (Volunteer) — Python & Data Science  
+**Remote | December 2024 – May 2025**
+
+Provided mentorship and hands-on training to beginner students in programming and applied data science.
+
+**Highlights:**
+- Taught **Python fundamentals**, data structures, OOP, and problem solving.
+- Delivered beginner-friendly training in **Data Science & Analytics**.
+- Covered supervised learning algorithms:  
+  *k-NN, SVM, Logistic Regression, Decision Trees, Random Forest, Naive Bayes*.
+- Introduced **Artificial Neural Networks (ANNs)** including activation functions and classification models.
+- Designed **mini-projects**, exercises, and practical coding sessions to reinforce learning.
+
+
+
+
 ### 🎓 Education
 - **M.Sc., Computer Engineering — Fırat University**  
 - **B.Sc., Computer Engineering — Karadeniz Technical University**
@@ -31,7 +67,7 @@ I am a Software Developer and Artificial Intelligence Researcher with practical 
 
 # 🚀 Featured Projects
 
-## ⭐ Digital Accounting Platform (SaaS)
+##  Digital Accounting Platform (SaaS)
 **Frontend Developer — ReactJS, TailwindCSS**  
 A modern digital accounting tool for small businesses, NGOs, and freelancers.  
 - 16+ customizable PDF report templates  
@@ -41,26 +77,25 @@ A modern digital accounting tool for small businesses, NGOs, and freelancers.
 
 ---
 
-## ⭐ Autonomous Lane Line Prediction for Unmarked Roads (TÜBİTAK Project 124E787)
-**Role:** Dataset Lead, Algorithm Developer  
-**Technologies:** CVAT, Python, OpenCV, CNN Architectures
+##  Hospital Information & E-Prescription System
+**Role:** Full Stack Developer  
+**Technologies:** Django, PostgreSQL, HTML, CSS, JavaScript, Bootstrap
 
-Contributed to a TÜBİTAK-funded research project titled  
-**“Prediction of Lane Lines on Unmarked Straight Roads for Autonomous Driving” (Project No: 124E787).**
+Developed a complete hospital workflow system integrating medical imaging, laboratory results, and automated prescription services. The platform streamlines patient processing, doctor workflows, and pharmacy verification.
 
-Main responsibilities and achievements included:
-- **Data Collection (IP No: 1):** Acquired raw driving footage from unmarked road environments.
-- **Dataset Labeling with CVAT (IP No: 2):** Annotated thousands of frames for lane regions, boundaries, and visual cues.
-- **Preprocessing Pipeline (IP No: 2):** Developed image cleaning, normalization, augmentation, and edge-enhancement steps.
-- **New CNN-Based Algorithm (IP No: 3):** Designed a custom convolutional model to detect and predict lane lines under low-visibility and sign-free conditions.
-- **Model Optimization (IP No: 4):** Improved inference speed and accuracy using hyperparameter tuning and architectural refinements.
-- **Post-Processing (IP No: 5):** Applied smoothing, curve fitting, and geometric refinement for stable lane output.
-- **Experimental Evaluation (IP No: 6):** Conducted test runs, recorded metrics, prepared documentation, and contributed to the scientific paper.
+Key Features:
+- **Medical Imaging Integration:** Supports MRI, CT, X-ray, and laboratory result uploads for physician analysis.
+- **Automated Patient Registration:** Secretary panel that assigns a **unique patient code** immediately after registration.
+- **Doctor Examination Module:** Doctors can view patient imaging/results, enter diagnostic notes, generate prescriptions, and upload them to the system.
+- **E-Prescription Workflow:** The system generates a **secure prescription code** that patients provide to the pharmacy.
+- **Pharmacy Verification & Dispensing:** Pharmacies access the prescription through the code and print the final list of medications for dispensing.
+- **End-to-End Healthcare Automation:** Ensures data consistency, fast processing, and improved communication between hospital departments.
 
-A full end-to-end pipeline covering dataset creation, model development, optimization, and reporting.
+A fully integrated solution covering registration → diagnosis → prescription → pharmacy delivery.
 
 
-## ⭐ HealthLink Somalia — Public Health Platform
+
+##  HealthLink Somalia — Public Health Platform
 **Full Stack Developer — Django**  
 Multilingual health information portal for medical professionals and the public.  
 - Article management system  
@@ -70,7 +105,7 @@ Multilingual health information portal for medical professionals and the public.
 
 ---
 
-## ⭐ Kurban Organization Management System
+##  Kurban Organization Management System
 **Full Stack Developer — Django**  
 Humanitarian aid platform for donation tracking and sacrificial operation management.  
 - Volunteer coordination  
@@ -80,7 +115,7 @@ Humanitarian aid platform for donation tracking and sacrificial operation manage
 
 ---
 
-## ⭐ Electrical System Management Platform
+##  Electrical System Management Platform
 **Full Stack Developer — Django REST + Vue.js 3**  
 Real-time electrical monitoring & visualization system.  
 - Modular REST APIs  
@@ -90,7 +125,7 @@ Real-time electrical monitoring & visualization system.
 
 ---
 
-## ⭐ Somali Language Summarization (Extractive + Abstractive)
+##  Somali Language Summarization (Extractive + Abstractive)
 **NLP Research Project**  
 Developed summarization models for a low-resource language.  
 - Transformer-based models  
@@ -99,7 +134,7 @@ Developed summarization models for a low-resource language.
 
 ---
 
-## ⭐ Deepfake Video Detection
+##  Deepfake Video Detection
 **AI Research — Published**  
 Hybrid architecture combining ResNeXt50 + LSTM.  
 - Spatial + temporal feature extraction  
@@ -108,19 +143,19 @@ Hybrid architecture combining ResNeXt50 + LSTM.
 
 ---
 
-## ⭐ MDocAgent — Multi-Modal Multi-Agent Document AI
+##  MDocAgent — Multi-Modal Multi-Agent Document AI
 Multi-agent system for document parsing and multimodal reasoning.  
 **Tech:** Python, Transformers, OCR Engines
 
 ---
 
-## ⭐ Image Classification using CNN
+##  Image Classification using CNN
 Built CNN-based image classification pipelines on multiple datasets.  
 **Tech:** TensorFlow, PyTorch
 
 ---
 
-## ⭐ Data Analysis — Starbucks Nutrition Dataset
+##  Data Analysis — Starbucks Nutrition Dataset
 Data cleaning, visualization & statistical reporting.  
 **Tech:** Pandas, Matplotlib
 
