@@ -41,6 +41,25 @@ A modern digital accounting tool for small businesses, NGOs, and freelancers.
 
 ---
 
+## ⭐ Autonomous Lane Line Prediction for Unmarked Roads (TÜBİTAK Project 124E787)
+**Role:** Dataset Lead, Algorithm Developer  
+**Technologies:** CVAT, Python, OpenCV, CNN Architectures
+
+Contributed to a TÜBİTAK-funded research project titled  
+**“Prediction of Lane Lines on Unmarked Straight Roads for Autonomous Driving” (Project No: 124E787).**
+
+Main responsibilities and achievements included:
+- **Data Collection (IP No: 1):** Acquired raw driving footage from unmarked road environments.
+- **Dataset Labeling with CVAT (IP No: 2):** Annotated thousands of frames for lane regions, boundaries, and visual cues.
+- **Preprocessing Pipeline (IP No: 2):** Developed image cleaning, normalization, augmentation, and edge-enhancement steps.
+- **New CNN-Based Algorithm (IP No: 3):** Designed a custom convolutional model to detect and predict lane lines under low-visibility and sign-free conditions.
+- **Model Optimization (IP No: 4):** Improved inference speed and accuracy using hyperparameter tuning and architectural refinements.
+- **Post-Processing (IP No: 5):** Applied smoothing, curve fitting, and geometric refinement for stable lane output.
+- **Experimental Evaluation (IP No: 6):** Conducted test runs, recorded metrics, prepared documentation, and contributed to the scientific paper.
+
+A full end-to-end pipeline covering dataset creation, model development, optimization, and reporting.
+
+
 ## ⭐ HealthLink Somalia — Public Health Platform
 **Full Stack Developer — Django**  
 Multilingual health information portal for medical professionals and the public.  
