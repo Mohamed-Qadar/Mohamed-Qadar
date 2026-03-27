@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+
+{% block title %}Analytics Dashboard{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <h2><i class="fas fa-chart-bar"></i> Analytics Dashboard</h2>
+    <p class="text-muted">Comprehensive system analytics and insights</p>
+
+    <!-- Key Metrics -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="stat-card primary">
+                <h3>{{ total_complaints }}</h3>
+                <p><i class="fas fa-file-alt"></i> Total Complaints</p>
+                <small>+{{ new_complaints_30d }} in last 30 days</small>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card tertiary">
+                <h3>{{ total_citizens }}</h3>
+                <p><i class="fas fa-users"></i> Registered Citizens</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card neutral">
+                <h3>{{ total_institutions }}</h3>
+                <p><i class="fas fa-building"></i> Active Institutions</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card primary">
+                <h3>{{ resolution_rate }}%</h3>
+                <p><i class="fas fa-check-circle"></i> Resolution Rate</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Breakdown -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">Pending</div>
+                <div class="card-body text-center">
+                    <h2 class="text-warning">{{ pending }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">In Progress</div>
+                <div class="card-body text-center">
+                    <h2 class="text-info">{{ in_progress }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">Resolved</div>
+                <div class="card-body text-center">
+                    <h2 class="text-success">{{ resolved }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-chart-pie"></i> Complaints by Category
+                </div>
+                <div class="card-body">
+                    <canvas id="categoryChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-chart-line"></i> Complaints by Priority
+                </div>
+                <div class="card-body">
+                    <canvas id="priorityChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Institutions -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-trophy"></i> Top Performing Institutions
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Institution</th>
+                                    <th>Total Complaints</th>
+                                    <th>Resolved</th>
+                                    <th>Performance Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for inst in top_institutions %}
+                                <tr>
+                                    <td>{{ forloop.counter }}</td>
+                                    <td>{{ inst.name }}</td>
+                                    <td>{{ inst.total }}</td>
+                                    <td>{{ inst.resolved }}</td>
+                                    <td>
+                                        <span class="badge bg-success">{{ inst.performance_score|floatformat:2 }}</span>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Category Chart
+const categoryCtx = document.getElementById('categoryChart');
+if (categoryCtx) {
+    new Chart(categoryCtx, {
+        type: 'doughnut',
+        data: {
+            labels: [{% for item in category_distribution %}'{{ item.category|title }}'{% if not forloop.last %}, {% endif %}{% endfor %}],
+            datasets: [{
+                data: [{% for item in category_distribution %}{{ item.count }}{% if not forloop.last %}, {% endif %}{% endfor %}],
+                backgroundColor: ['#12AD2B', '#0056B3', '#D40000', '#ffc107', '#6c757d', '#17a2b8', '#28a745', '#dc3545']
+            }]
+        }
+    });
+}
+
+// Priority Chart
+const priorityCtx = document.getElementById('priorityChart');
+if (priorityCtx) {
+    new Chart(priorityCtx, {
+        type: 'bar',
+        data: {
+            labels: [{% for item in priority_distribution %}'{{ item.priority|title }}'{% if not forloop.last %}, {% endif %}{% endfor %}],
+            datasets: [{
+                label: 'Number of Complaints',
+                data: [{% for item in priority_distribution %}{{ item.count }}{% if not forloop.last %}, {% endif %}{% endfor %}],
+                backgroundColor: '#0056B3'
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+</script>
+{% endblock %}
