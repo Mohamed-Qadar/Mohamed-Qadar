@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}Submit Complaint{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0"><i class="fas fa-file-alt"></i> Submit New Complaint</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="id_title" class="form-label">Complaint Title *</label>
+                            {{ form.title }}
+                            {% if form.title.errors %}
+                                <div class="text-danger">{{ form.title.errors }}</div>
+                            {% endif %}
+                            <small class="form-text text-muted">A brief, clear title for your complaint</small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="id_category" class="form-label">Category *</label>
+                            {{ form.category }}
+                            {% if form.category.errors %}
+                                <div class="text-danger">{{ form.category.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="id_description" class="form-label">Detailed Description *</label>
+                            {{ form.description }}
+                            {% if form.description.errors %}
+                                <div class="text-danger">{{ form.description.errors }}</div>
+                            {% endif %}
+                            <small class="form-text text-muted">Provide as much detail as possible to help resolve your issue</small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="id_location" class="form-label">Location *</label>
+                            {{ form.location }}
+                            {% if form.location.errors %}
+                                <div class="text-danger">{{ form.location.errors }}</div>
+                            {% endif %}
+                            <small class="form-text text-muted">Specific location where the issue occurred</small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="id_image" class="form-label">Attach Image (Optional)</label>
+                            {{ form.image }}
+                            {% if form.image.errors %}
+                                <div class="text-danger">{{ form.image.errors }}</div>
+                            {% endif %}
+                            <small class="form-text text-muted">Upload a photo if available (helps with resolution)</small>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane"></i> Submit Complaint
+                            </button>
+                            <a href="{% url 'users:dashboard' %}" class="btn btn-secondary">
+                                <i class="fas fa-times"></i> Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

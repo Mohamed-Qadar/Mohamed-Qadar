@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %}Government Dashboard{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-2 sidebar">
+            <h5><i class="fas fa-tachometer-alt"></i> Dashboard</h5>
+            <hr>
+            <a href="{% url 'users:dashboard' %}" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="{% url 'complaints:list' %}"><i class="fas fa-list"></i> Assigned Complaints</a>
+            <a href="{% url 'institutions:detail' institution.pk %}"><i class="fas fa-building"></i> Institution Info</a>
+            <a href="{% url 'users:profile' %}"><i class="fas fa-user"></i> Profile</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-10 main-content">
+            <h2>Government Official Dashboard</h2>
+            <p class="text-muted">{% if institution %}{{ institution.name }}{% else %}No Institution Assigned{% endif %}</p>
+
+            <!-- Statistics Cards -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stat-card primary">
+                        <h3>{{ total_complaints }}</h3>
+                        <p><i class="fas fa-file-alt"></i> Total Assigned</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card neutral">
+                        <h3>{{ pending_complaints }}</h3>
+                        <p><i class="fas fa-clock"></i> Pending</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card tertiary">
+                        <h3>{{ in_progress_complaints }}</h3>
+                        <p><i class="fas fa-spinner"></i> In Progress</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card primary">
+                        <h3>{{ resolved_complaints }}</h3>
+                        <p><i class="fas fa-check"></i> Resolved</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Complaints -->
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-tasks"></i> Recent Assigned Complaints
+                        </div>
+                        <div class="card-body">
+                            {% if recent_complaints %}
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Title</th>
+                                                <th>Citizen</th>
+                                                <th>Priority</th>
+                                                <th>Status</th>
+                                                <th>Date</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for complaint in recent_complaints %}
+                                            <tr>
+                                                <td>{{ complaint.title }}</td>
+                                                <td>{{ complaint.citizen.username }}</td>
+                                                <td><span class="badge bg-warning">{{ complaint.get_priority_display }}</span></td>
+                                                <td><span class="badge badge-{{ complaint.status }}">{{ complaint.get_status_display }}</span></td>
+                                                <td>{{ complaint.created_at|date:"M d, Y" }}</td>
+                                                <td>
+                                                    <a href="{% url 'complaints:detail' complaint.pk %}" class="btn btn-sm btn-primary">
+                                                        <i class="fas fa-eye"></i> View
+                                                    </a>
+                                                    <a href="{% url 'complaints:update_status' complaint.pk %}" class="btn btn-sm btn-info">
+                                                        <i class="fas fa-edit"></i> Update
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            {% else %}
+                                <p class="text-muted">No complaints assigned to your institution yet.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% block title %}Complaint Details{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <!-- Complaint Details Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">
+                        <i class="fas fa-file-alt"></i> {{ complaint.title }}
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <p><strong>Category:</strong> <span class="badge bg-secondary">{{ complaint.get_category_display }}</span></p>
+                            <p><strong>Priority:</strong> <span class="badge bg-warning">{{ complaint.get_priority_display }}</span></p>
+                            <p><strong>Status:</strong> <span class="badge badge-{{ complaint.status }}">{{ complaint.get_status_display }}</span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Submitted:</strong> {{ complaint.created_at|date:"M d, Y H:i" }}</p>
+                            <p><strong>By:</strong> {{ complaint.citizen.get_full_name|default:complaint.citizen.username }}</p>
+                            <p><strong>Location:</strong> {{ complaint.location }}</p>
+                        </div>
+                    </div>
+
+                    {% if complaint.assigned_to %}
+                    <div class="alert alert-info">
+                        <strong><i class="fas fa-building"></i> Assigned to:</strong> {{ complaint.assigned_to.name }}
+                    </div>
+                    {% endif %}
+
+                    <hr>
+
+                    <h5>Description</h5>
+                    <p>{{ complaint.description }}</p>
+
+                    {% if complaint.image %}
+                    <h5>Attached Image</h5>
+                    <img src="{{ complaint.image.url }}" alt="Complaint Image" class="img-fluid rounded" style="max-height: 400px;">
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Responses Section -->
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-comments"></i> Responses ({{ responses.count }})</h5>
+                </div>
+                <div class="card-body">
+                    {% if responses %}
+                        {% for response in responses %}
+                        <div class="border-bottom pb-3 mb-3">
+                            <div class="d-flex justify-content-between">
+                                <h6>{{ response.responder.get_full_name|default:response.responder.username }}</h6>
+                                <small class="text-muted">{{ response.created_at|date:"M d, Y H:i" }}</small>
+                            </div>
+                            <p class="mb-0">{{ response.message }}</p>
+                            {% if not response.is_public %}
+                                <small class="text-muted"><i class="fas fa-lock"></i> Private Response</small>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-muted">No responses yet.</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Status Updates -->
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-history"></i> Status History</h5>
+                </div>
+                <div class="card-body">
+                    {% if updates %}
+                        <ul class="timeline">
+                            {% for update in updates %}
+                            <li>
+                                <strong>{{ update.created_at|date:"M d, Y H:i" }}</strong> -
+                                Changed from <span class="badge badge-{{ update.old_status }}">{{ update.old_status|title }}</span>
+                                to <span class="badge badge-{{ update.new_status }}">{{ update.new_status|title }}</span>
+                                by {{ update.updated_by.username }}
+                                {% if update.notes %}
+                                <p class="mb-0 mt-1"><em>{{ update.notes }}</em></p>
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="text-muted">No status updates yet.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Actions Sidebar -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-cog"></i> Actions</h5>
+                </div>
+                <div class="card-body">
+                    {% if user.is_presidency %}
+                        <a href="{% url 'complaints:assign' complaint.pk %}" class="btn btn-primary btn-sm w-100 mb-2">
+                            <i class="fas fa-user-tag"></i> Assign to Institution
+                        </a>
+                        <a href="{% url 'complaints:update_status' complaint.pk %}" class="btn btn-info btn-sm w-100 mb-2">
+                            <i class="fas fa-edit"></i> Update Status
+                        </a>
+                        <a href="{% url 'complaints:respond' complaint.pk %}" class="btn btn-success btn-sm w-100 mb-2">
+                            <i class="fas fa-reply"></i> Add Response
+                        </a>
+                    {% elif user.is_government %}
+                        <a href="{% url 'complaints:update_status' complaint.pk %}" class="btn btn-info btn-sm w-100 mb-2">
+                            <i class="fas fa-edit"></i> Update Status
+                        </a>
+                        <a href="{% url 'complaints:respond' complaint.pk %}" class="btn btn-success btn-sm w-100 mb-2">
+                            <i class="fas fa-reply"></i> Add Response
+                        </a>
+                    {% elif user.is_citizen and complaint.status == 'resolved' %}
+                        {% if not complaint.rating %}
+                        <a href="{% url 'complaints:rate' complaint.pk %}" class="btn btn-warning btn-sm w-100 mb-2">
+                            <i class="fas fa-star"></i> Rate This Resolution
+                        </a>
+                        {% else %}
+                        <div class="alert alert-success">
+                            <strong>Your Rating:</strong> {{ complaint.rating.rating }}/5 stars
+                        </div>
+                        {% endif %}
+                    {% endif %}
+
+                    <a href="{% url 'complaints:list' %}" class="btn btn-secondary btn-sm w-100">
+                        <i class="fas fa-arrow-left"></i> Back to List
+                    </a>
+                </div>
+            </div>
+
+            {% if complaint.ai_category or complaint.ai_priority %}
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h6 class="mb-0"><i class="fas fa-robot"></i> AI Analysis</h6>
+                </div>
+                <div class="card-body">
+                    {% if complaint.ai_category %}
+                    <p><strong>AI Category:</strong> {{ complaint.ai_category|title }}</p>
+                    {% endif %}
+                    {% if complaint.ai_priority %}
+                    <p><strong>AI Priority:</strong> {{ complaint.ai_priority|title }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

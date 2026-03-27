@@ -1,0 +1,26 @@
+# Django
+Django==4.2.7
+psycopg2-binary==2.9.9
+
+# Python dependencies
+Pillow==10.1.0
+python-decouple==3.8
+
+# AI and ML libraries
+scikit-learn==1.3.2
+numpy==1.26.2
+
+# For natural language processing (optional, for advanced AI features)
+# transformers==4.35.2
+# torch==2.1.1
+
+# Development tools
+django-extensions==3.2.3
+ipython==8.18.1
+
+# Production server
+gunicorn==21.2.0
+whitenoise==6.6.0
+
+# Environment variables
+python-dotenv==1.0.0
