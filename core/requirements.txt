@@ -1,9 +1,9 @@
-# Django
-Django==4.2.7
+# Django - Updated to patched version to fix security vulnerabilities
+Django==4.2.26
 psycopg2-binary==2.9.9
 
-# Python dependencies
-Pillow==10.1.0
+# Python dependencies - Updated to patched version
+Pillow==10.3.0
 python-decouple==3.8
 
 # AI and ML libraries
@@ -18,8 +18,8 @@ numpy==1.26.2
 django-extensions==3.2.3
 ipython==8.18.1
 
-# Production server
-gunicorn==21.2.0
+# Production server - Updated to patched version
+gunicorn==22.0.0
 whitenoise==6.6.0
 
 # Environment variables
