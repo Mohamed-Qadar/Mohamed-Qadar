@@ -59,7 +59,7 @@ All identified security vulnerabilities in project dependencies have been patche
    - Severity: HIGH
    - Description: Request smuggling leading to bypassing endpoint restrictions
 
-### 3. Pillow: 10.1.0 → 10.3.0
+### 3. Pillow: 10.1.0 → 12.1.1
 
 **Fixed Vulnerabilities:**
 
@@ -68,6 +68,12 @@ All identified security vulnerabilities in project dependencies have been patche
    - Patched: 10.3.0
    - Severity: HIGH
    - Description: Buffer overflow vulnerability in image processing
+
+2. **Out-of-bounds Write in PSD Image Loading** (CVE-2025-xxxxx)
+   - Affected: 10.3.0 - 12.1.0
+   - Patched: 12.1.1
+   - Severity: HIGH
+   - Description: Out-of-bounds write vulnerability when loading PSD images
 
 ---
 
@@ -153,9 +159,11 @@ After updating dependencies:
 - May have configuration changes
 - Test production deployment settings
 
-### Pillow 10.1.0 → 10.3.0
-- **Patch update** - Should be compatible
-- No API changes expected
+### Pillow 10.1.0 → 12.1.1
+- **Major version bump** - Review changelog carefully
+- Test image upload functionality thoroughly
+- Verify all image processing operations
+- Check for API changes in Pillow 12.x
 
 ---
 
@@ -165,7 +173,7 @@ All security patches applied. New versions:
 ```
 Django==4.2.26          # Was 4.2.7
 gunicorn==22.0.0        # Was 21.2.0
-Pillow==10.3.0          # Was 10.1.0
+Pillow==12.1.1          # Was 10.1.0
 ```
 
 ---
@@ -202,7 +210,7 @@ Pillow==10.3.0          # Was 10.1.0
 
 - [x] Django updated to 4.2.26
 - [x] Gunicorn updated to 22.0.0
-- [x] Pillow updated to 10.3.0
+- [x] Pillow updated to 12.1.1
 - [x] Requirements.txt updated
 - [x] Security advisory documented
 - [ ] Test suite executed

@@ -3,7 +3,7 @@ Django==4.2.26
 psycopg2-binary==2.9.9
 
 # Python dependencies - Updated to patched version
-Pillow==10.3.0
+Pillow==12.1.1
 python-decouple==3.8
 
 # AI and ML libraries
