@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Complaint Analytics - Citizen Feedback System{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h2><i class="fas fa-chart-area"></i> Complaint Analytics</h2>
+            <p class="lead">Detailed analysis of complaint trends and patterns</p>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h6><i class="fas fa-calendar-alt"></i> Daily Complaint Trends (Last 30 Days)</h6>
+                </div>
+                <div class="card-body">
+                    <canvas id="dailyTrendsChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h6><i class="fas fa-clock"></i> Average Resolution Time by Category</h6>
+                </div>
+                <div class="card-body">
+                    <canvas id="resolutionTimeChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fas fa-table"></i> Resolution Time by Category (Detailed)</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Average Resolution Time</th>
+                                    <th>Performance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in resolution_by_category %}
+                                <tr>
+                                    <td><strong>{{ item.category }}</strong></td>
+                                    <td>{{ item.avg_time|floatformat:1 }} hours</td>
+                                    <td>
+                                        {% if item.avg_time < 24 %}
+                                        <span class="badge bg-success">Excellent</span>
+                                        {% elif item.avg_time < 72 %}
+                                        <span class="badge bg-warning">Good</span>
+                                        {% else %}
+                                        <span class="badge bg-danger">Needs Improvement</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Daily Trends Chart
+const dailyData = {{ daily_trends|safe }};
+const dailyLabels = dailyData.map(d => d.date);
+const dailyCounts = dailyData.map(d => d.count);
+
+const dailyCtx = document.getElementById('dailyTrendsChart');
+if (dailyCtx) {
+    new Chart(dailyCtx, {
+        type: 'line',
+        data: {
+            labels: dailyLabels,
+            datasets: [{
+                label: 'Number of Complaints',
+                data: dailyCounts,
+                borderColor: '#0056B3',
+                backgroundColor: 'rgba(0, 86, 179, 0.1)',
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+// Resolution Time Chart
+const resolutionData = {{ resolution_by_category|safe }};
+const resolutionLabels = resolutionData.map(r => r.category);
+const resolutionTimes = resolutionData.map(r => r.avg_time);
+
+const resolutionCtx = document.getElementById('resolutionTimeChart');
+if (resolutionCtx) {
+    new Chart(resolutionCtx, {
+        type: 'horizontalBar',
+        data: {
+            labels: resolutionLabels,
+            datasets: [{
+                label: 'Average Hours',
+                data: resolutionTimes,
+                backgroundColor: '#12AD2B',
+                borderColor: '#12AD2B',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            indexAxis: 'y',
+            scales: {
+                x: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+</script>
+{% endblock %}

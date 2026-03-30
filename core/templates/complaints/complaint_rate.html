@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Rate Complaint - Citizen Feedback System{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mb-3">
+                <div class="card-header bg-success text-white">
+                    <h5><i class="fas fa-check-circle"></i> Resolved Complaint</h5>
+                </div>
+                <div class="card-body">
+                    <h6>{{ complaint.title }}</h6>
+                    <p class="text-muted">Submitted on: {{ complaint.created_at|date:"F d, Y" }}</p>
+                    <p class="text-muted">Resolved on: {{ complaint.resolved_at|date:"F d, Y" }}</p>
+                    <p><strong>Handled by:</strong> {{ complaint.assigned_to.name }}</p>
+                    <p><strong>Resolution Time:</strong> {{ complaint.get_resolution_time|floatformat:1 }} hours</p>
+                    <hr>
+                    <p>{{ complaint.description }}</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fas fa-star"></i> Rate Your Experience</h5>
+                </div>
+                <div class="card-body">
+                    <p class="lead text-center">How satisfied are you with the resolution of your complaint?</p>
+
+                    <form method="post">
+                        {% csrf_token %}
+
+                        <div class="mb-4 text-center">
+                            <label class="form-label d-block"><strong>Rating *</strong></label>
+                            <div class="rating-stars">
+                                {{ form.rating }}
+                            </div>
+                            {% if form.rating.errors %}
+                            <div class="text-danger mt-2">{{ form.rating.errors }}</div>
+                            {% endif %}
+                            <small class="form-text text-muted d-block mt-2">
+                                Click on the stars to rate (1 = Poor, 5 = Excellent)
+                            </small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="{{ form.feedback.id_for_label }}" class="form-label">Additional Feedback (Optional)</label>
+                            {{ form.feedback }}
+                            {% if form.feedback.errors %}
+                            <div class="text-danger">{{ form.feedback.errors }}</div>
+                            {% endif %}
+                            <small class="form-text text-muted">
+                                Share your thoughts about the service you received.
+                            </small>
+                        </div>
+
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle"></i> Your feedback helps us improve government services.
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-check"></i> Submit Rating
+                            </button>
+                            <a href="{% url 'complaints:detail' complaint.pk %}" class="btn btn-secondary">
+                                <i class="fas fa-times"></i> Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.rating-stars {
+    font-size: 2.5rem;
+}
+.rating-stars input[type="radio"] {
+    display: none;
+}
+.rating-stars label {
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.rating-stars label:hover,
+.rating-stars label:hover ~ label,
+.rating-stars input[type="radio"]:checked ~ label {
+    color: #ffc107;
+}
+</style>
+
+{% endblock %}
