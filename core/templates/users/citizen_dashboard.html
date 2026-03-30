@@ -12,6 +12,7 @@
             <a href="{% url 'users:dashboard' %}" class="active"><i class="fas fa-home"></i> Home</a>
             <a href="{% url 'complaints:list' %}"><i class="fas fa-list"></i> My Complaints</a>
             <a href="{% url 'complaints:create' %}"><i class="fas fa-plus"></i> New Complaint</a>
+            <a href="{% url 'analytics:public_transparency' %}"><i class="fas fa-chart-line"></i> Public Transparency</a>
             <a href="{% url 'messaging:list' %}"><i class="fas fa-envelope"></i> Messages</a>
             <a href="{% url 'messaging:announcement_list' %}"><i class="fas fa-bullhorn"></i> Announcements</a>
             <a href="{% url 'users:profile' %}"><i class="fas fa-user"></i> Profile</a>
@@ -63,6 +64,9 @@
                             </a>
                             <a href="{% url 'messaging:create' %}" class="btn btn-info me-2">
                                 <i class="fas fa-envelope"></i> Message Presidency
+                            </a>
+                            <a href="{% url 'analytics:public_transparency' %}" class="btn btn-success me-2">
+                                <i class="fas fa-chart-line"></i> Public Transparency
                             </a>
                             <a href="{% url 'complaints:list' %}" class="btn btn-secondary">
                                 <i class="fas fa-list"></i> View All Complaints

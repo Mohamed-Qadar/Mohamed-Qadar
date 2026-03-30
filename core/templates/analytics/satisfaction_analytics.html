@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Citizen Satisfaction Analytics{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h2><i class="fas fa-smile"></i> Citizen Satisfaction Index</h2>
+            <p class="lead">Analysis of citizen satisfaction with government services</p>
+            <hr>
+        </div>
+    </div>
+
+    <!-- Overall Satisfaction -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="stat-card primary">
+                <h2>{{ overall_avg_rating }}/5</h2>
+                <p><i class="fas fa-star"></i> Overall Average Rating</p>
+                <small>Based on {{ total_ratings }} ratings</small>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stat-card tertiary">
+                <h2>{{ total_ratings }}</h2>
+                <p><i class="fas fa-comments"></i> Total Ratings</p>
+                <small>From resolved complaints</small>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stat-card primary">
+                <h2>{{ institutions_satisfaction|length }}</h2>
+                <p><i class="fas fa-building"></i> Rated Institutions</p>
+                <small>With citizen feedback</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Institution Satisfaction Rankings -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fas fa-chart-bar"></i> Institution Satisfaction Rankings</h5>
+                </div>
+                <div class="card-body">
+                    {% if institutions_satisfaction %}
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Institution</th>
+                                    <th>Average Rating</th>
+                                    <th>Total Ratings</th>
+                                    <th>Sentiment Score</th>
+                                    <th>Satisfaction Index</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in institutions_satisfaction %}
+                                <tr>
+                                    <td>
+                                        {% if forloop.counter == 1 %}
+                                        <i class="fas fa-trophy text-warning"></i>
+                                        {% elif forloop.counter == 2 %}
+                                        <i class="fas fa-medal text-secondary"></i>
+                                        {% elif forloop.counter == 3 %}
+                                        <i class="fas fa-medal" style="color: #CD7F32;"></i>
+                                        {% endif %}
+                                        {{ forloop.counter }}
+                                    </td>
+                                    <td><strong>{{ item.institution.name }}</strong></td>
+                                    <td>
+                                        <div class="text-warning">
+                                            {% for i in "12345" %}
+                                                {% if forloop.counter <= item.satisfaction.average_rating %}
+                                                <i class="fas fa-star"></i>
+                                                {% else %}
+                                                <i class="far fa-star"></i>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <span class="text-dark">({{ item.satisfaction.average_rating }})</span>
+                                        </div>
+                                    </td>
+                                    <td>{{ item.satisfaction.total_ratings }}</td>
+                                    <td>
+                                        {% if item.satisfaction.average_sentiment > 0 %}
+                                        <span class="badge bg-success">+{{ item.satisfaction.average_sentiment }}</span>
+                                        {% elif item.satisfaction.average_sentiment < 0 %}
+                                        <span class="badge bg-danger">{{ item.satisfaction.average_sentiment }}</span>
+                                        {% else %}
+                                        <span class="badge bg-secondary">0.0</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <strong class="me-2">{{ item.satisfaction.satisfaction_index }}/100</strong>
+                                            <div class="progress" style="width: 100px;">
+                                                <div class="progress-bar
+                                                    {% if item.satisfaction.satisfaction_index >= 80 %}bg-success
+                                                    {% elif item.satisfaction.satisfaction_index >= 60 %}bg-info
+                                                    {% elif item.satisfaction.satisfaction_index >= 40 %}bg-warning
+                                                    {% else %}bg-danger{% endif %}"
+                                                    style="width: {{ item.satisfaction.satisfaction_index }}%"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        {% if item.satisfaction.satisfaction_index >= 80 %}
+                                        <span class="badge bg-success">Excellent</span>
+                                        {% elif item.satisfaction.satisfaction_index >= 60 %}
+                                        <span class="badge bg-info">Good</span>
+                                        {% elif item.satisfaction.satisfaction_index >= 40 %}
+                                        <span class="badge bg-warning">Fair</span>
+                                        {% else %}
+                                        <span class="badge bg-danger">Poor</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <p class="text-muted">No satisfaction data available yet. Citizens need to rate resolved complaints.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Satisfaction Distribution Chart -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h6><i class="fas fa-chart-pie"></i> Top 10 Most Satisfied Institutions</h6>
+                </div>
+                <div class="card-body">
+                    <canvas id="topSatisfactionChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h6><i class="fas fa-chart-bar"></i> Satisfaction Index Distribution</h6>
+                </div>
+                <div class="card-body">
+                    <canvas id="satisfactionDistributionChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Top Satisfaction Chart
+const topSatData = {{ institutions_satisfaction|slice:":10"|safe }};
+const topSatLabels = topSatData.map(item => item.institution.name.substring(0, 20));
+const topSatScores = topSatData.map(item => item.satisfaction.satisfaction_index);
+
+const topSatCtx = document.getElementById('topSatisfactionChart');
+if (topSatCtx) {
+    new Chart(topSatCtx, {
+        type: 'bar',
+        data: {
+            labels: topSatLabels,
+            datasets: [{
+                label: 'Satisfaction Index',
+                data: topSatScores,
+                backgroundColor: '#12AD2B',
+                borderColor: '#12AD2B',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+}
+
+// Satisfaction Distribution
+const allSatData = {{ institutions_satisfaction|safe }};
+const excellent = allSatData.filter(item => item.satisfaction.satisfaction_index >= 80).length;
+const good = allSatData.filter(item => item.satisfaction.satisfaction_index >= 60 && item.satisfaction.satisfaction_index < 80).length;
+const fair = allSatData.filter(item => item.satisfaction.satisfaction_index >= 40 && item.satisfaction.satisfaction_index < 60).length;
+const poor = allSatData.filter(item => item.satisfaction.satisfaction_index < 40).length;
+
+const distCtx = document.getElementById('satisfactionDistributionChart');
+if (distCtx) {
+    new Chart(distCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Excellent (80-100)', 'Good (60-79)', 'Fair (40-59)', 'Poor (0-39)'],
+            datasets: [{
+                data: [excellent, good, fair, poor],
+                backgroundColor: ['#12AD2B', '#0056B3', '#ffc107', '#D40000']
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+}
+</script>
+{% endblock %}

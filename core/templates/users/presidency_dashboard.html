@@ -12,6 +12,7 @@
             <a href="{% url 'users:dashboard' %}" class="active"><i class="fas fa-home"></i> Overview</a>
             <a href="{% url 'complaints:list' %}"><i class="fas fa-list"></i> All Complaints</a>
             <a href="{% url 'analytics:dashboard' %}"><i class="fas fa-chart-bar"></i> Analytics</a>
+            <a href="{% url 'analytics:satisfaction_analytics' %}"><i class="fas fa-smile"></i> Satisfaction Index</a>
             <a href="{% url 'institutions:list' %}"><i class="fas fa-building"></i> Institutions</a>
             <a href="{% url 'messaging:list' %}"><i class="fas fa-envelope"></i> Messages</a>
             <a href="{% url 'messaging:announcement_create' %}"><i class="fas fa-bullhorn"></i> New Announcement</a>
@@ -73,6 +74,132 @@
                         </div>
                         <div class="card-body">
                             <canvas id="categoryChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW: Critical Alerts Section -->
+            {% if critical_alerts %}
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card border-danger">
+                        <div class="card-header bg-danger text-white">
+                            <i class="fas fa-exclamation-triangle"></i> CRITICAL ALERTS - Immediate Action Required
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-sm table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Title</th>
+                                            <th>Category</th>
+                                            <th>Priority</th>
+                                            <th>Location</th>
+                                            <th>Age</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for alert in critical_alerts %}
+                                        <tr class="table-danger">
+                                            <td><strong>{{ alert.title }}</strong></td>
+                                            <td><span class="badge bg-danger">{{ alert.get_category_display }}</span></td>
+                                            <td><span class="badge bg-dark">{{ alert.get_priority_display }}</span></td>
+                                            <td>{{ alert.location }}</td>
+                                            <td>{{ alert.created_at|timesince }} ago</td>
+                                            <td>
+                                                <a href="{% url 'complaints:detail' alert.pk %}" class="btn btn-sm btn-danger">
+                                                    <i class="fas fa-eye"></i> View
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- NEW: Institution Rankings -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-success text-white">
+                            <i class="fas fa-trophy"></i> Institution Rankings
+                        </div>
+                        <div class="card-body">
+                            {% if rankings.best_ministry %}
+                            <div class="mb-3 p-3 bg-light rounded">
+                                <h6 class="text-success"><i class="fas fa-star"></i> Best Ministry of the Month</h6>
+                                <h5>{{ rankings.best_ministry.name }}</h5>
+                                <p class="mb-0 text-muted">Performance Score: <strong>{{ rankings.best_ministry.performance_score }}</strong></p>
+                            </div>
+                            {% endif %}
+
+                            {% if rankings.most_resolved %}
+                            <div class="mb-3 p-3 bg-light rounded">
+                                <h6 class="text-info"><i class="fas fa-check-double"></i> Most Resolved</h6>
+                                <h5>{{ rankings.most_resolved.name }}</h5>
+                                <p class="mb-0 text-muted">Resolved: <strong>{{ rankings.most_resolved.total_complaints_resolved }}</strong> complaints</p>
+                            </div>
+                            {% endif %}
+
+                            {% if rankings.worst_performing %}
+                            <div class="p-3 bg-light rounded">
+                                <h6 class="text-danger"><i class="fas fa-exclamation-circle"></i> Needs Improvement</h6>
+                                <h5>{{ rankings.worst_performing.name }}</h5>
+                                <p class="mb-0 text-muted">Performance Score: <strong>{{ rankings.worst_performing.performance_score }}</strong></p>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW: AI Predictions -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-warning text-dark">
+                            <i class="fas fa-brain"></i> AI Predictions & Alerts
+                        </div>
+                        <div class="card-body">
+                            <h6><i class="fas fa-fire"></i> Complaint Hotspots (Growing)</h6>
+                            {% if hotspots %}
+                            <ul class="list-group mb-3">
+                                {% for hotspot in hotspots %}
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span>{{ hotspot.category|title }}</span>
+                                    <span>
+                                        <span class="badge bg-warning text-dark">+{{ hotspot.growth_rate }}%</span>
+                                        <span class="badge bg-secondary">{{ hotspot.current_count }} complaints</span>
+                                    </span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% else %}
+                            <p class="text-muted small">No significant hotspots detected</p>
+                            {% endif %}
+
+                            <h6><i class="fas fa-exclamation-triangle"></i> Institutions at Backlog Risk</h6>
+                            {% if at_risk_institutions %}
+                            <ul class="list-group">
+                                {% for inst in at_risk_institutions %}
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span class="small">{{ inst.institution.name|truncatewords:4 }}</span>
+                                    <span>
+                                        <span class="badge {% if inst.risk_level == 'high' %}bg-danger{% else %}bg-warning text-dark{% endif %}">
+                                            {{ inst.backlog_ratio }}% backlog
+                                        </span>
+                                    </span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% else %}
+                            <p class="text-muted small">No institutions at high risk</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
