@@ -1,0 +1,316 @@
+{% extends 'base.html' %}
+
+{% block title %}Presidency Dashboard{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-2 sidebar">
+            <h5><i class="fas fa-tachometer-alt"></i> Dashboard</h5>
+            <hr>
+            <a href="{% url 'users:dashboard' %}" class="active"><i class="fas fa-home"></i> Overview</a>
+            <a href="{% url 'complaints:list' %}"><i class="fas fa-list"></i> All Complaints</a>
+            <a href="{% url 'analytics:dashboard' %}"><i class="fas fa-chart-bar"></i> Analytics</a>
+            <a href="{% url 'analytics:satisfaction_analytics' %}"><i class="fas fa-smile"></i> Satisfaction Index</a>
+            <a href="{% url 'institutions:list' %}"><i class="fas fa-building"></i> Institutions</a>
+            <a href="{% url 'messaging:list' %}"><i class="fas fa-envelope"></i> Messages</a>
+            <a href="{% url 'messaging:announcement_create' %}"><i class="fas fa-bullhorn"></i> New Announcement</a>
+            <a href="{% url 'users:profile' %}"><i class="fas fa-user"></i> Profile</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-10 main-content">
+            <h2>Presidency Dashboard</h2>
+            <p class="text-muted">National Overview</p>
+
+            <!-- Statistics Cards -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stat-card primary">
+                        <h3>{{ total_complaints }}</h3>
+                        <p><i class="fas fa-file-alt"></i> Total Complaints</p>
+                        <small>+{{ new_complaints }} this month</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card tertiary">
+                        <h3>{{ top_institutions.count }}</h3>
+                        <p><i class="fas fa-building"></i> Active Institutions</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card neutral">
+                        <h3>{{ recent_messages.count }}</h3>
+                        <p><i class="fas fa-envelope"></i> Citizen Messages</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card primary">
+                        <h3>{{ resolution_rate }}%</h3>
+                        <p><i class="fas fa-check"></i> Resolution Rate</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Complaints by Status -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-chart-pie"></i> Complaints by Status
+                        </div>
+                        <div class="card-body">
+                            <canvas id="statusChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Complaints by Category -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-chart-bar"></i> Complaints by Category
+                        </div>
+                        <div class="card-body">
+                            <canvas id="categoryChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW: Critical Alerts Section -->
+            {% if critical_alerts %}
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card border-danger">
+                        <div class="card-header bg-danger text-white">
+                            <i class="fas fa-exclamation-triangle"></i> CRITICAL ALERTS - Immediate Action Required
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-sm table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Title</th>
+                                            <th>Category</th>
+                                            <th>Priority</th>
+                                            <th>Location</th>
+                                            <th>Age</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for alert in critical_alerts %}
+                                        <tr class="table-danger">
+                                            <td><strong>{{ alert.title }}</strong></td>
+                                            <td><span class="badge bg-danger">{{ alert.get_category_display }}</span></td>
+                                            <td><span class="badge bg-dark">{{ alert.get_priority_display }}</span></td>
+                                            <td>{{ alert.location }}</td>
+                                            <td>{{ alert.created_at|timesince }} ago</td>
+                                            <td>
+                                                <a href="{% url 'complaints:detail' alert.pk %}" class="btn btn-sm btn-danger">
+                                                    <i class="fas fa-eye"></i> View
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- NEW: Institution Rankings -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-success text-white">
+                            <i class="fas fa-trophy"></i> Institution Rankings
+                        </div>
+                        <div class="card-body">
+                            {% if rankings.best_ministry %}
+                            <div class="mb-3 p-3 bg-light rounded">
+                                <h6 class="text-success"><i class="fas fa-star"></i> Best Ministry of the Month</h6>
+                                <h5>{{ rankings.best_ministry.name }}</h5>
+                                <p class="mb-0 text-muted">Performance Score: <strong>{{ rankings.best_ministry.performance_score }}</strong></p>
+                            </div>
+                            {% endif %}
+
+                            {% if rankings.most_resolved %}
+                            <div class="mb-3 p-3 bg-light rounded">
+                                <h6 class="text-info"><i class="fas fa-check-double"></i> Most Resolved</h6>
+                                <h5>{{ rankings.most_resolved.name }}</h5>
+                                <p class="mb-0 text-muted">Resolved: <strong>{{ rankings.most_resolved.total_complaints_resolved }}</strong> complaints</p>
+                            </div>
+                            {% endif %}
+
+                            {% if rankings.worst_performing %}
+                            <div class="p-3 bg-light rounded">
+                                <h6 class="text-danger"><i class="fas fa-exclamation-circle"></i> Needs Improvement</h6>
+                                <h5>{{ rankings.worst_performing.name }}</h5>
+                                <p class="mb-0 text-muted">Performance Score: <strong>{{ rankings.worst_performing.performance_score }}</strong></p>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW: AI Predictions -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-warning text-dark">
+                            <i class="fas fa-brain"></i> AI Predictions & Alerts
+                        </div>
+                        <div class="card-body">
+                            <h6><i class="fas fa-fire"></i> Complaint Hotspots (Growing)</h6>
+                            {% if hotspots %}
+                            <ul class="list-group mb-3">
+                                {% for hotspot in hotspots %}
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span>{{ hotspot.category|title }}</span>
+                                    <span>
+                                        <span class="badge bg-warning text-dark">+{{ hotspot.growth_rate }}%</span>
+                                        <span class="badge bg-secondary">{{ hotspot.current_count }} complaints</span>
+                                    </span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% else %}
+                            <p class="text-muted small">No significant hotspots detected</p>
+                            {% endif %}
+
+                            <h6><i class="fas fa-exclamation-triangle"></i> Institutions at Backlog Risk</h6>
+                            {% if at_risk_institutions %}
+                            <ul class="list-group">
+                                {% for inst in at_risk_institutions %}
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span class="small">{{ inst.institution.name|truncatewords:4 }}</span>
+                                    <span>
+                                        <span class="badge {% if inst.risk_level == 'high' %}bg-danger{% else %}bg-warning text-dark{% endif %}">
+                                            {{ inst.backlog_ratio }}% backlog
+                                        </span>
+                                    </span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% else %}
+                            <p class="text-muted small">No institutions at high risk</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Performing Institutions -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-trophy"></i> Top Performing Institutions
+                        </div>
+                        <div class="card-body">
+                            {% if top_institutions %}
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>Institution</th>
+                                                <th>Resolved</th>
+                                                <th>Score</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for inst in top_institutions %}
+                                            <tr>
+                                                <td>{{ inst.name }}</td>
+                                                <td>{{ inst.resolved }}</td>
+                                                <td><span class="badge bg-success">{{ inst.performance_score }}</span></td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            {% else %}
+                                <p class="text-muted">No institution data available.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Complaints -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-clock"></i> Recent Complaints
+                        </div>
+                        <div class="card-body">
+                            {% if recent_complaints %}
+                                <div class="list-group">
+                                    {% for complaint in recent_complaints|slice:":5" %}
+                                    <a href="{% url 'complaints:detail' complaint.pk %}" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">{{ complaint.title }}</h6>
+                                            <small>{{ complaint.created_at|timesince }} ago</small>
+                                        </div>
+                                        <p class="mb-1 small">{{ complaint.description|truncatewords:15 }}</p>
+                                        <small><span class="badge badge-{{ complaint.status }}">{{ complaint.get_status_display }}</span></small>
+                                    </a>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                <p class="text-muted">No recent complaints.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Status Chart
+const statusCtx = document.getElementById('statusChart');
+if (statusCtx) {
+    new Chart(statusCtx, {
+        type: 'doughnut',
+        data: {
+            labels: [{% for item in complaints_by_status %}'{{ item.status|title }}'{% if not forloop.last %}, {% endif %}{% endfor %}],
+            datasets: [{
+                data: [{% for item in complaints_by_status %}{{ item.count }}{% if not forloop.last %}, {% endif %}{% endfor %}],
+                backgroundColor: ['#ffc107', '#0056B3', '#12AD2B', '#D40000']
+            }]
+        }
+    });
+}
+
+// Category Chart
+const categoryCtx = document.getElementById('categoryChart');
+if (categoryCtx) {
+    new Chart(categoryCtx, {
+        type: 'bar',
+        data: {
+            labels: [{% for item in complaints_by_category %}'{{ item.category|title }}'{% if not forloop.last %}, {% endif %}{% endfor %}],
+            datasets: [{
+                label: 'Complaints',
+                data: [{% for item in complaints_by_category %}{{ item.count }}{% if not forloop.last %}, {% endif %}{% endfor %}],
+                backgroundColor: '#12AD2B'
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+</script>
+{% endblock %}
