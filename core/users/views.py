@@ -105,12 +105,21 @@ def citizen_dashboard(request):
 @login_required
 def government_dashboard(request):
     """Dashboard for government officials."""
+    from analytics.ai_utils import analyze_satisfaction_by_institution
+
     institution = request.user.institution
 
     if institution:
         complaints = Complaint.objects.filter(assigned_to=institution)
+        # Get satisfaction data for this institution
+        satisfaction_data = analyze_satisfaction_by_institution(institution)
     else:
         complaints = Complaint.objects.none()
+        satisfaction_data = {
+            'average_rating': 0,
+            'total_ratings': 0,
+            'satisfaction_index': 0
+        }
 
     context = {
         'institution': institution,
@@ -119,6 +128,8 @@ def government_dashboard(request):
         'in_progress_complaints': complaints.filter(status='in_progress').count(),
         'resolved_complaints': complaints.filter(status='resolved').count(),
         'recent_complaints': complaints.order_by('-created_at')[:10],
+        # Satisfaction metrics
+        'satisfaction': satisfaction_data,
     }
     return render(request, 'users/government_dashboard.html', context)
 
@@ -126,11 +137,22 @@ def government_dashboard(request):
 @login_required
 def presidency_dashboard(request):
     """Dashboard for presidency officials."""
+    from analytics.ai_utils import (
+        get_institution_rankings,
+        detect_critical_complaints,
+        predict_complaint_hotspots,
+        predict_institution_backlog_risk
+    )
+
     # Get statistics for the last 30 days
     thirty_days_ago = timezone.now() - timedelta(days=30)
 
     total_complaints = Complaint.objects.count()
     new_complaints = Complaint.objects.filter(created_at__gte=thirty_days_ago).count()
+
+    # Calculate resolution rate
+    resolved = Complaint.objects.filter(status='resolved').count()
+    resolution_rate = round((resolved / total_complaints * 100), 1) if total_complaints > 0 else 0
 
     # Complaints by status
     complaints_by_status = Complaint.objects.values('status').annotate(count=Count('id'))
@@ -150,14 +172,33 @@ def presidency_dashboard(request):
         receiver=request.user
     ).order_by('-created_at')[:10]
 
+    # NEW FEATURES
+    # Get institution rankings
+    rankings = get_institution_rankings()
+
+    # Detect critical alerts
+    critical_alerts = detect_critical_complaints()[:10]  # Top 10 critical
+
+    # Predict hotspots
+    hotspots = predict_complaint_hotspots()[:5]  # Top 5 hotspots
+
+    # Institutions at backlog risk
+    at_risk = predict_institution_backlog_risk()[:5]  # Top 5 at risk
+
     context = {
         'total_complaints': total_complaints,
         'new_complaints': new_complaints,
+        'resolution_rate': resolution_rate,
         'complaints_by_status': complaints_by_status,
         'complaints_by_category': complaints_by_category,
         'top_institutions': institutions,
         'recent_messages': recent_messages,
         'recent_complaints': Complaint.objects.order_by('-created_at')[:10],
+        # New analytics
+        'rankings': rankings,
+        'critical_alerts': critical_alerts,
+        'hotspots': hotspots,
+        'at_risk_institutions': at_risk,
     }
     return render(request, 'users/presidency_dashboard.html', context)
 

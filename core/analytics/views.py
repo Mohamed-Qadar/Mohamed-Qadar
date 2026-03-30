@@ -7,10 +7,18 @@ from django.db.models import Count, Q, Avg
 from django.utils import timezone
 from datetime import timedelta
 
-from complaints.models import Complaint
+from complaints.models import Complaint, ComplaintRating
 from institutions.models import Institution
 from users.models import User
-from .ai_utils import get_trending_categories, calculate_institution_performance
+from .ai_utils import (
+    get_trending_categories,
+    calculate_institution_performance,
+    get_institution_rankings,
+    analyze_satisfaction_by_institution,
+    detect_critical_complaints,
+    predict_complaint_hotspots,
+    predict_institution_backlog_risk
+)
 
 
 @login_required
@@ -172,3 +180,93 @@ def complaint_analytics(request):
     }
 
     return render(request, 'analytics/complaint_analytics.html', context)
+
+
+def public_transparency(request):
+    """
+    Public transparency page accessible to all users (no login required).
+    Shows national statistics and institution performance.
+    """
+    # Overall statistics
+    total_complaints = Complaint.objects.count()
+    resolved_complaints = Complaint.objects.filter(status='resolved').count()
+    pending_complaints = Complaint.objects.filter(status='pending').count()
+    in_progress_complaints = Complaint.objects.filter(status='in_progress').count()
+
+    # Calculate resolution percentage and backlog
+    resolution_percentage = (resolved_complaints / total_complaints * 100) if total_complaints > 0 else 0
+    backlog = pending_complaints + in_progress_complaints
+
+    # Get institution rankings
+    rankings = get_institution_rankings()
+
+    # Category statistics
+    category_stats = Complaint.objects.values('category').annotate(
+        total=Count('id'),
+        resolved=Count('id', filter=Q(status='resolved'))
+    ).order_by('-total')[:10]
+
+    # Recent trends (last 30 days)
+    thirty_days_ago = timezone.now() - timedelta(days=30)
+    recent_complaints = Complaint.objects.filter(created_at__gte=thirty_days_ago).count()
+    recent_resolved = Complaint.objects.filter(
+        status='resolved',
+        resolved_at__gte=thirty_days_ago
+    ).count()
+
+    context = {
+        'total_complaints': total_complaints,
+        'resolved_complaints': resolved_complaints,
+        'pending_complaints': pending_complaints,
+        'in_progress_complaints': in_progress_complaints,
+        'resolution_percentage': round(resolution_percentage, 1),
+        'backlog': backlog,
+        'rankings': rankings,
+        'category_stats': category_stats,
+        'recent_complaints': recent_complaints,
+        'recent_resolved': recent_resolved,
+    }
+
+    return render(request, 'analytics/public_transparency.html', context)
+
+
+@login_required
+def satisfaction_analytics(request):
+    """
+    Citizen Satisfaction Index analytics (presidency only).
+    """
+    if not request.user.is_presidency():
+        from django.contrib import messages
+        messages.error(request, 'Only presidency can access satisfaction analytics.')
+        from django.shortcuts import redirect
+        return redirect('users:dashboard')
+
+    # Get all institutions with satisfaction data
+    institutions_satisfaction = []
+    for institution in Institution.objects.filter(is_active=True):
+        satisfaction_data = analyze_satisfaction_by_institution(institution)
+        if satisfaction_data['total_ratings'] > 0:
+            institutions_satisfaction.append({
+                'institution': institution,
+                'satisfaction': satisfaction_data
+            })
+
+    # Sort by satisfaction index
+    institutions_satisfaction.sort(key=lambda x: x['satisfaction']['satisfaction_index'], reverse=True)
+
+    # Get overall satisfaction metrics
+    all_ratings = ComplaintRating.objects.all()
+    if all_ratings.exists():
+        avg_rating = sum([r.rating for r in all_ratings]) / all_ratings.count()
+        total_ratings = all_ratings.count()
+    else:
+        avg_rating = 0
+        total_ratings = 0
+
+    context = {
+        'institutions_satisfaction': institutions_satisfaction,
+        'overall_avg_rating': round(avg_rating, 2),
+        'total_ratings': total_ratings,
+    }
+
+    return render(request, 'analytics/satisfaction_analytics.html', context)
