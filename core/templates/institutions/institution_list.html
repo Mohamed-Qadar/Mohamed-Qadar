@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Government Institutions - Citizen Feedback System{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h2><i class="fas fa-building"></i> Government Institutions</h2>
+            <p class="lead">Performance ranking of government ministries and institutions</p>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for institution in institutions %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5 class="mb-0">{{ institution.name }}</h5>
+                    <span class="badge bg-info">{{ institution.get_institution_type_display }}</span>
+                </div>
+                <div class="card-body">
+                    {% if institution.description %}
+                    <p class="card-text text-muted">{{ institution.description|truncatewords:20 }}</p>
+                    {% endif %}
+
+                    <div class="row text-center mt-3">
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <h3 class="text-primary">{{ institution.performance_score|floatformat:1 }}</h3>
+                                <small class="text-muted">Performance Score</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <h3 class="text-success">{{ institution.get_resolution_rate|floatformat:1 }}%</h3>
+                                <small class="text-muted">Resolution Rate</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <small class="text-muted">Total Complaints</small>
+                            <p class="mb-0"><strong>{{ institution.total_complaints_received }}</strong></p>
+                        </div>
+                        <div class="col-6">
+                            <small class="text-muted">Resolved</small>
+                            <p class="mb-0"><strong class="text-success">{{ institution.total_complaints_resolved }}</strong></p>
+                        </div>
+                    </div>
+
+                    {% if institution.average_resolution_time %}
+                    <div class="mt-2">
+                        <small class="text-muted">Avg. Resolution Time</small>
+                        <p class="mb-0"><strong>{{ institution.average_resolution_time|floatformat:0 }} hours</strong></p>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'institutions:detail' institution.pk %}" class="btn btn-sm btn-primary w-100">
+                        <i class="fas fa-eye"></i> View Details
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i> No institutions found in the system.
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+.stat-box {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+</style>
+{% endblock %}
