@@ -46,16 +46,19 @@ Provided mentorship and hands-on training to beginner students in programming an
 
 
 ### 🎓 Education
-- **M.Sc., Computer Engineering — Fırat University**  
-- **B.Sc., Computer Engineering — Karadeniz Technical University**
+- **M.Sc., Computer Engineering  Fırat University**  
+- **B.Sc., Computer Engineering  Karadeniz Technical University**
 
 ### 🔬 Research Interests
-- Natural Language Processing (T5, BERT, LLaMA, mT5)
-- Deepfake Detection (ResNeXt, LSTM)
-- Multi-Modal Document Understanding (OCR + NLP + Vision)
-- Image Processing with CNNs
-- AI for Education & Public Health
-
+- Natural Language Processing (NLP)  
+Machine Learning: Scikit-learn; supervised learning (k-NN, SVM, Logistic Regression, Decision Trees, Random Forest, Naive Bayes); Artificial Neural Networks (ANNs)
+Computer Vision: Image segmentation, object detection, and scene understanding using CNN-based and hybrid architectures
+Autonomous Driving Systems: Drivable area segmentation and perception in unstructured environments
+Deepfake Detection: Spatio-temporal modeling with CNNs, ResNeXt, and LSTM
+Multi-Modal Learning: Document understanding (OCR + Vision + NLP; DocVQA)
+Image Processing: Feature extraction, enhancement, and representation learning
+Deep Learning Optimization: Training strategies, loss functions, and performance evaluation
+AI for Education and Public Health
 ---
 
 ## 📬 Contact
