@@ -13,7 +13,7 @@ I am a Software Developer and Artificial Intelligence Researcher with practical 
 
 # 💼 Experience
 
-##  Elasoft — Software Developer Intern  
+##  Elasoft  Software Developer Intern  
 **Trabzon, Türkiye | January 2024 – May 2024**  
 **Tech:** ASP.NET Core 8.0, C#, Dapper, SQL Server, SignalR, HTML/CSS/JS, Bootstrap
 
@@ -29,7 +29,7 @@ Worked as a backend-focused Software Developer Intern, contributing to a product
 
 ---
 
-##  Online Instructor (Volunteer) — Python & Data Science  
+##  Online Instructor (Volunteer)  Python & Data Science  
 **Remote | December 2024 – May 2025**
 
 Provided mentorship and hands-on training to beginner students in programming and applied data science.
@@ -51,14 +51,13 @@ Provided mentorship and hands-on training to beginner students in programming an
 
 ### 🔬 Research Interests
 - Natural Language Processing (NLP)  
-Machine Learning: Scikit-learn; supervised learning (k-NN, SVM, Logistic Regression, Decision Trees, Random Forest, Naive Bayes); Artificial Neural Networks (ANNs)
-Computer Vision: Image segmentation, object detection, and scene understanding using CNN-based and hybrid architectures
-Autonomous Driving Systems: Drivable area segmentation and perception in unstructured environments
-Deepfake Detection: Spatio-temporal modeling with CNNs, ResNeXt, and LSTM
-Multi-Modal Learning: Document understanding (OCR + Vision + NLP; DocVQA)
-Image Processing: Feature extraction, enhancement, and representation learning
-Deep Learning Optimization: Training strategies, loss functions, and performance evaluation
-AI for Education and Public Health
+- Machine Learning: Scikit-learn; supervised learning (k-NN, SVM, Logistic Regression, Decision Trees, Random Forest, Naive Bayes); Artificial Neural Networks (ANNs)
+- Computer Vision: Image segmentation, object detection, and scene understanding using CNN-based and hybrid architectures
+- Autonomous Driving Systems: Drivable area segmentation and perception in unstructured environments
+- Deepfake Detection: Spatio-temporal modeling with CNNs, ResNeXt, and LSTM
+- Multi-Modal Learning: Document understanding (OCR + Vision + NLP; DocVQA)
+- Image Processing: Feature extraction, enhancement, and representation learning
+- AI for Education and Public Health
 ---
 
 ## 📬 Contact
