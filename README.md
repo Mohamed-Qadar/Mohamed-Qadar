@@ -7,7 +7,13 @@
 ---
 
 ## 🧑‍💻 About Me
-I am a Software Developer and Artificial Intelligence Researcher with practical experience in full-stack web development, machine learning, and deep learning applications. I focus on building scalable systems and conducting applied AI research, especially in low-resource NLP, video analysis, OCR, and document intelligence.
+I am an Artificial Intelligence Researcher and Software Engineer specializing in Natural Language Processing (NLP), Machine Learning, and Deep Learning. My research interests span a broad range of AI domains, including large language models,information extraction, educational AI, computer vision, image processing and multimodal systems. I have authored and contributed to multiple research publications and applied AI projects, with a strong focus on developing intelligent solutions that address real-world challenges. 
+
+Beyond research, I have extensive experience in designing and developing large-scale software systems, web platforms, mobile applications, and AI-powered solutions. My work combines scientific research with practical software engineering, enabling the development of scalable, reliable, and production-ready applications. I am also actively involved in cybersecurity-related projects, with an interest in secure system design, intelligent security solutions, and the integration of AI into modern software ecosystems.
+
+My goal is to bridge the gap between advanced AI research and impactful software products that deliver measurable value in both academic and industry environments.
+
+
 
 
 
