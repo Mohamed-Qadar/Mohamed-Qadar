@@ -14,8 +14,8 @@
   <a href="https://tr.linkedin.com/in/mohamed-ibrahim-abdi-572475232"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
   <a href="https://github.com/Mohamed-Qadar"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
   <!-- ORCID ve Google Scholar linklerini ekledikten sonra alttaki iki satırdaki # yerine URL yaz, eklemeyeceksen satırları sil -->
-  <a href="#"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" /></a>
-  <a href="#"><img src="https://img.shields.io/badge/Google_Scholar-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white" /></a>
+  <a href="https://orcid.org/0009-0002-7874-8740"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" /></a>
+  <a href="https://scholar.google.com/citations?user=0yqZjd4AAAAJ&hl=en"><img src="https://img.shields.io/badge/Google_Scholar-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white" /></a>
 </p>
 
 ---
