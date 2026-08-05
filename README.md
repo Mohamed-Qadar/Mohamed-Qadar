@@ -134,4 +134,148 @@ development, and experimental evaluation.
 ## Cybersecurity Projects
 
 - **Security Operations Center (SOC) Architecture** — Open-source SOC built with Wazuh, Elastic
-  Stack, Suricata, and pfSense to monitor and protect critical
+  Stack, Suricata, and pfSense to monitor and protect critical infrastructure in low-resource
+  environments.
+- **Automated Vulnerability Scanning Platform** — Detects common web vulnerabilities including SQL
+  Injection and Remote Code Execution, with remediation guidance aligned to OWASP standards.
+- **Web Application Security Hardening** — ModSecurity WAF deployment with custom OWASP rules and
+  two-factor authentication enforced for administrative access.
+- **Lightweight Endpoint Detection and Response (EDR)** — Customised Wazuh agents monitoring file
+  integrity, unauthorised access attempts, and suspicious processes on legacy and low-resource
+  systems.
+- **Real-Time Threat Intelligence Framework** — Cowrie honeypots with AbuseIPDB integration and
+  instant SMS and Telegram notification for security incidents.
+- **Offensive and Defensive Cybersecurity Lab** — Virtual environment on Kali Linux and Ubuntu
+  simulating phishing, reverse shells, and DDoS scenarios, with documented defence strategies for
+  training.
+- **Incident Monitoring and Alert Dashboard** — Colour-coded (green / yellow / red) dashboard letting
+  non-technical managers read system status and security alerts at a glance.
+
+---
+
+## Undergraduate Projects
+
+### Real-Time Vehicle Tracking & Fleet Management System — Graduation Project
+
+- **Hardware architecture:** Mobile tracking unit built by interfacing an Arduino Leonardo
+  microcontroller with a GPS module for NMEA telemetry capture and a GSM/GPRS shield for cellular
+  field data transmission.
+- **Firmware & telemetry:** Embedded C/C++ firmware using AT commands to establish GPRS network
+  bearers, packaging tracking metrics (latitude, longitude, speed, timestamp) into payloads.
+- **Backend & data pipeline:** High-throughput Node.js REST API listening continuously for incoming
+  cellular streams, parsing and structure-validating coordinates for storage.
+- **Web & mobile dashboards:** Responsive React application with live geospatial mapping, rendering
+  real-time vehicle markers and seamless UI state updates without page refreshes.
+
+**Key skills:** Embedded Systems · IoT Architecture · GPRS/GSM Communication · AT Commands ·
+Node.js · React · Geospatial Mapping · RESTful APIs
+
+### Other Projects
+
+- **Real Estate Website** — Three-tier platform (Admin, Agent, API) using C#, ASP.NET Core 8.0,
+  Dapper, SQL Server, and SignalR for real-time communication.
+- **Automata Theory Project** — GUI application converting Regular Expressions into NFA and DFA,
+  built in Python.
+- **Local Network Client-Server Socket Communication** — Client-server system using socket
+  programming for local networks.
+- **Telephone Central Circuit Design** — Digital circuit in VHDL simulating telephone exchange
+  operations.
+- **Employee Health Status Tracking System (COVID-19)** — Database system for employee health
+  records using PostgreSQL and Python.
+- **Responsive Website Development** — Fully responsive site built with HTML, CSS, and JavaScript.
+- **Weather App & Console Games** — Weather application in Python and Tkinter; Rock-Paper-Scissors
+  game and socket-based messaging application developed as team projects.
+
+---
+
+## Publications
+
+### Journal — Published
+
+- **Muhammad Ibrahim, Burhan Ergen** (2025). Facial Expression Based Emotion Recognition. *Journal of
+  Electrical Engineering and Computer (JEECOM)*. [DOI](https://doi.org/10.33650/jeecom.v7i1.11069)
+- **Yardımcı, N., Abdi, M. I., Ergen, B.** (2025). Hibrit ResNeXt ve LSTM Mimarisi Kullanılarak
+  Deepfake Video Algılama. *Politeknik Dergisi*.
+  [DOI](https://doi.org/10.2339/politeknik.1721371)
+
+### Journal — Under Review
+
+- **Abdi, M. I., Ergen, B.** (2026). Multilingual Transformer Models for Medical Question Generation
+  in Low-Resource Turkish Clinical Texts. *Balkan Journal of Electrical and Computer Engineering*.
+- **Doğan, G., Abdi, M. I., Yılmaz, B., Ergen, B.** (2026). A New Convolutional Neural
+  Network-Based Approach for Lane Line Estimation Leveraging Selective Kernel-Based Cross Feature
+  Fusion. *Engineering Applications of Artificial Intelligence*.
+- **Doğan, G., Abdi, M. I., Yılmaz, B., Ergen, B.** (2026). A New Lightweight Network for Drivable
+  Area Segmentation and Heuristic Lane Boundary Estimation on Unmarked Roads. *Neurocomputing
+  (Elsevier)*.
+- **Abdi, M. I., Yardımcı, N., Ergen, B.** (2026). Hybrid BERT-LSTM Model for Turkish Fake News
+  Detection. *Gazi University Journal of Science*.
+
+### Conference
+
+- **Abdi, M. I., Ergen, B.** (2026). Classification of Somali News Headlines Using Classical Machine
+  Learning. *9th International Mediterranean Scientific Research Congress*, Adana, Türkiye,
+  April 29–30, 2026.
+- **Abdi, M. I., Ergen, B.** (2026). Instruction-Tuned FLAN-T5 for Generative Biomedical QA in
+  Low-Resource Settings. *International Informatics Congress 2026 (IIC2026)*, Batman, Türkiye,
+  April 29 – May 1, 2026.
+
+---
+
+## Technical Skills
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=python,cs,cpp,c,kotlin,dotnet,django,react,vue,nodejs,ts,js,html,css,bootstrap,tailwind" height="42" />
+</p>
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,postgres,mssql,mysql,docker,git,github,linux,postman,azure,aws" height="42" />
+</p>
+
+| Area | Technologies |
+|---|---|
+| **Programming Languages** | Python, C, C++, C#, Kotlin |
+| **Backend & APIs** | ASP.NET Core 8, REST APIs, Node.js, SignalR, Dapper, Django |
+| **Web Technologies** | HTML, CSS, JavaScript, TypeScript, React, Vue.js, Bootstrap |
+| **Databases** | Microsoft SQL Server, PostgreSQL, relational data modelling, SQL, database integration |
+| **Data Science & ML** | NumPy, Pandas, Matplotlib, Scikit-learn, TensorFlow, Keras |
+| **Cloud** | Google Colab, Microsoft Azure, AWS (basic) |
+| **DevOps & Version Control** | Docker, Docker Compose, Git, GitHub, Postman, Swagger/OpenAPI |
+| **Specialisation** | Deep Learning, Computer Vision, Natural Language Processing, AI in Education |
+| **Tools** | LaTeX, Overleaf, Visual Studio, VS Code, Canva, MS Office, Google Workspace |
+| **Research** | Dataset preparation, model evaluation, academic writing, literature review, experiment design, reproducible research |
+
+---
+
+## Languages
+
+| Language | Level |
+|---|---|
+| Somali | Native |
+| English | Excellent |
+| Turkish | Excellent |
+| Arabic | Good |
+
+---
+
+## References
+
+- **Prof. Dr. Abdullahi Abdi Omar** — Lecturer, Somali National University *(Academic Mentor)*
+- **Prof. Dr. Burhan Ergen** — Director, Institute of Natural and Applied Sciences, Fırat University
+  *(M.Sc. Supervisor)*
+- **Prof. Dr. Bekir Dizdaroğlu** — Vice Chair, Department of Computer Engineering, Karadeniz
+  Technical University *(B.Sc. Supervisor)*
+- **Prof. Dr. Cemal Köse** — Lecturer, Karadeniz Technical University *(Collaborator, Network and
+  Internet Project)*
+- **Dr. Gürkan Doğan** — Lecturer, Munzur University *(Collaborator, TÜBİTAK Project)*
+- **Eng. Abdullahi Ibrahim Abdi** — Chief Technical Officer, Blue Sky Energy; Lecturer, Somali
+  National University *(Collaborator, Software Development Projects)*
+
+*Contact details for references are available upon request.*
+
+---
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=Mohamed-Qadar&theme=tokyonight" width="48%" alt="GitHub streak" />
+</p>
+
+<p align="center"><b>Thank you for visiting my profile.</b></p>
