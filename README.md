@@ -1,239 +1,137 @@
-<!-- Banner -->
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=1A73E8&center=true&vCenter=true&width=800&lines=Hi+there,+I'm+Mohamed+Ibrahim+Abdi+👋;Software+Developer+|+AI+%26+NLP+Researcher;Full+Stack+Engineer+|+Deep+Learning+Enthusiast" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3000&pause=1000&color=1A73E8&center=true&vCenter=true&width=820&lines=Hi+there%2C+I'm+Mohamed+Ibrahim+Abdi;AI+%26+NLP+Researcher;Full-Stack+Software+Engineer;Cybersecurity+Practitioner" alt="Typing SVG" />
 </p>
 
-# Mohamed Ibrahim Abdi
----
-
-## 🧑‍💻 About Me
-I am an Artificial Intelligence Researcher and Software Engineer specializing in Natural Language Processing (NLP), Machine Learning, and Deep Learning. My research interests span a broad range of AI domains, including large language models,information extraction, educational AI, computer vision, image processing and multimodal systems. I have authored and contributed to multiple research publications and applied AI projects, with a strong focus on developing intelligent solutions that address real-world challenges. 
-
-Beyond research, I have extensive experience in designing and developing large-scale software systems, web platforms, mobile applications, and AI-powered solutions. My work combines scientific research with practical software engineering, enabling the development of scalable, reliable, and production-ready applications. I am also actively involved in cybersecurity-related projects, with an interest in secure system design, intelligent security solutions, and the integration of AI into modern software ecosystems.
-
-My goal is to bridge the gap between advanced AI research and impactful software products that deliver measurable value in both academic and industry environments.
-
-
-
-
-
-# 💼 Experience
-
-##  Elasoft  Software Developer Intern  
-**Trabzon, Türkiye | January 2024 – May 2024**  
-**Tech:** ASP.NET Core 8.0, C#, Dapper, SQL Server, SignalR, HTML/CSS/JS, Bootstrap
-
-Worked as a backend-focused Software Developer Intern, contributing to a production-level real estate management platform.
-
-**Key Contributions:**
-- Developed core backend features using **ASP.NET Core API 8.0** and **Dapper**.
-- Designed a **three-layer architecture** with Admin Panel, Agent Panel, and Client UI modules.
-- Implemented RESTful API endpoints connecting backend and frontend layers.
-- Integrated **SignalR** for real-time messaging between agents and users.
-- Built frontend components using HTML, CSS, JavaScript, and Bootstrap.
-- Optimized SQL queries and data processing pipelines using Microsoft SQL Server.
-
----
-
-##  Online Instructor (Volunteer)  Python & Data Science  
-**Remote | December 2024 – May 2025**
-
-Provided mentorship and hands-on training to beginner students in programming and applied data science.
-
-**Highlights:**
-- Taught **Python fundamentals**, data structures, OOP, and problem solving.
-- Delivered beginner-friendly training in **Data Science & Analytics**.
-- Covered supervised learning algorithms:  
-  *k-NN, SVM, Logistic Regression, Decision Trees, Random Forest, Naive Bayes*.
-- Introduced **Artificial Neural Networks (ANNs)** including activation functions and classification models.
-- Designed **mini-projects**, exercises, and practical coding sessions to reinforce learning.
-
-
-
-
-### 🎓 Education
-- **M.Sc., Computer Engineering  Fırat University**  
-- **B.Sc., Computer Engineering  Karadeniz Technical University**
-
-### 🔬 Research Interests
-- Natural Language Processing (NLP)  
-- Machine Learning: Scikit-learn; supervised learning (k-NN, SVM, Logistic Regression, Decision Trees, Random Forest, Naive Bayes); Artificial Neural Networks (ANNs)
-- Computer Vision: Image segmentation, object detection, and scene understanding using CNN-based and hybrid architectures
-- Autonomous Driving Systems: Drivable area segmentation and perception in unstructured environments
-- Deepfake Detection: Spatio-temporal modeling with CNNs, ResNeXt, and LSTM
-- Multi-Modal Learning: Document understanding (OCR + Vision + NLP; DocVQA)
-- Image Processing: Feature extraction, enhancement, and representation learning
-- AI for Education and Public Health
----
-
-## 📬 Contact
-<a href="mailto:mohamedqadar280@gmail.com"><img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-<a href="https://tr.linkedin.com/in/mohamed-ibrahim-abdi-572475232"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-<a href="https://github.com/Mohamed-Qadar"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-
----
-
-# 🚀 Featured Projects
-
-##  Digital Accounting Platform (SaaS)
-**Frontend Developer — ReactJS, TailwindCSS**  
-A modern digital accounting tool for small businesses, NGOs, and freelancers.  
-- 16+ customizable PDF report templates  
-- Template-driven export engine  
-- Clean and intuitive SaaS dashboard  
-**Tech:** ReactJS, TailwindCSS
-
----
-
-##  Hospital Information & E-Prescription System
-**Role:** Full Stack Developer  
-**Technologies:** Django, PostgreSQL, HTML, CSS, JavaScript, Bootstrap
-
-Developed a complete hospital workflow system integrating medical imaging, laboratory results, and automated prescription services. The platform streamlines patient processing, doctor workflows, and pharmacy verification.
-
-Key Features:
-- **Medical Imaging Integration:** Supports MRI, CT, X-ray, and laboratory result uploads for physician analysis.
-- **Automated Patient Registration:** Secretary panel that assigns a **unique patient code** immediately after registration.
-- **Doctor Examination Module:** Doctors can view patient imaging/results, enter diagnostic notes, generate prescriptions, and upload them to the system.
-- **E-Prescription Workflow:** The system generates a **secure prescription code** that patients provide to the pharmacy.
-- **Pharmacy Verification & Dispensing:** Pharmacies access the prescription through the code and print the final list of medications for dispensing.
-- **End-to-End Healthcare Automation:** Ensures data consistency, fast processing, and improved communication between hospital departments.
-
-A fully integrated solution covering registration → diagnosis → prescription → pharmacy delivery.
-
-
-
-##  HealthLink Somalia — Public Health Platform
-**Full Stack Developer — Django**  
-Multilingual health information portal for medical professionals and the public.  
-- Article management system  
-- Academic resource library  
-- Admin dashboards for content review  
-**Tech:** Django, Bootstrap, HTML, JavaScript
-
----
-
-##  Kurban Organization Management System
-**Full Stack Developer — Django**  
-Humanitarian aid platform for donation tracking and sacrificial operation management.  
-- Volunteer coordination  
-- Multilingual support  
-- Transparent reporting dashboards  
-**Tech:** Django, PostgreSQL, JavaScript, Bootstrap
-
----
-
-##  Electrical System Management Platform
-**Full Stack Developer — Django REST + Vue.js 3**  
-Real-time electrical monitoring & visualization system.  
-- Modular REST APIs  
-- Voltage/current/load analytics  
-- Interactive engineering dashboards  
-**Tech:** Django REST Framework, Vue.js 3, Chart.js
-
----
-
-##  Somali Language Summarization (Extractive + Abstractive)
-**NLP Research Project**  
-Developed summarization models for a low-resource language.  
-- Transformer-based models  
-- Custom preprocessing pipeline  
-**Tech:** Transformers, Python
-
----
-
-##  Deepfake Video Detection
-**AI Research — Published**  
-Hybrid architecture combining ResNeXt50 + LSTM.  
-- Spatial + temporal feature extraction  
-- Deepfake classification  
-**Tech:** PyTorch, ResNeXt50, LSTM
-
----
-
-##  MDocAgent — Multi-Modal Multi-Agent Document AI
-Multi-agent system for document parsing and multimodal reasoning.  
-**Tech:** Python, Transformers, OCR Engines
-
----
-
-##  Image Classification using CNN
-Built CNN-based image classification pipelines on multiple datasets.  
-**Tech:** TensorFlow, PyTorch
-
----
-
-##  Data Analysis — Starbucks Nutrition Dataset
-Data cleaning, visualization & statistical reporting.  
-**Tech:** Pandas, Matplotlib
-
----
-
-# 🎓 Undergraduate Projects
-
-- **Real Estate Platform — ASP.NET Core 8.0, Dapper, SQL Server, SignalR**  
-  Three-tier architecture (Admin, Agent, API) with real-time communication.
-
-- **Automata Tools — Python GUI**  
-  RE → NFA → DFA conversion tool with interactive visualization.
-
-- **Responsive Website — HTML, CSS, JS**  
-  Fully responsive informational site.
-
-- **Telephone Exchange Circuit — VHDL**  
-  Digital simulation of basic telephone central operations.
-
-- **COVID-19 Employee Health Tracking — PostgreSQL + Python**  
-  Health record management system.
-
-- **Python Projects — Weather App, Console Games, Socket Messaging App**
-
----
-
-# 🛠️ Technical Skills
-
-## 🧩 Programming Languages
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=python,cpp,cs,php,kotlin" height="45" />
-</p>
-
-## 🌐 Web Development
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=django,react,vue,html,css,js,bootstrap,tailwind" height="45" />
-</p>
-
-## 🗄️ Databases
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=postgres,mysql,mssql" height="45" />
-</p>
-
-## 🧠 AI & Machine Learning
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow" height="45" />
-</p>
-
-## ☁️ Cloud & DevOps
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=aws,azure,git,github" height="45" />
-</p>
-
----
-
-# 📚 Publications
-
-- **Facial Expression Based Emotion Recognition** — JEECOM  
-  https://doi.org/10.33650/jeecom.v7i1.11069
-
-- **Deepfake Video Detection Using ResNeXt + LSTM** — Politeknik Dergisi  
-  https://doi.org/10.2339/politeknik.1721371
-
----
-## GitHub Activity
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mohamed-Qadar&theme=tokyonight" width="50%" alt="GitHub streak">
-</p>
-
+<h1 align="center">Mohamed Ibrahim Abdi</h1>
 
 <p align="center">
-  <b>Thank you for visiting my profile! 🚀</b>
+  <b>M.Sc. Computer Engineering</b> · Fırat University &nbsp;|&nbsp; <b>B.Sc. Computer Engineering</b> · Karadeniz Technical University<br/>
+  Natural Language Processing · Computer Vision · Full-Stack Development · Cybersecurity
 </p>
+
+<p align="center">
+  <a href="mailto:mohamedqadar280@gmail.com"><img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://tr.linkedin.com/in/mohamed-ibrahim-abdi-572475232"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://github.com/Mohamed-Qadar"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <!-- ORCID ve Google Scholar linklerini ekledikten sonra alttaki iki satırdaki # yerine URL yaz, eklemeyeceksen satırları sil -->
+  <a href="#"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Google_Scholar-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white" /></a>
+</p>
+
+---
+
+## About Me
+
+I am a Computer Engineer holding an M.Sc. in Computer Engineering from Fırat University and a B.Sc.
+from Karadeniz Technical University, combining full-stack software development, cybersecurity, IT
+systems, database technologies, and applied artificial intelligence. I have hands-on experience
+designing and building secure backend services, RESTful APIs, responsive web applications, real-time
+systems, database-driven platforms, and technical monitoring solutions.
+
+My research focuses on Natural Language Processing, transformer-based language models, multilingual
+and low-resource language processing, automatic question generation, text classification, computer
+vision, image processing, and deep learning.
+
+My cybersecurity work covers SOC architectures, vulnerability assessment, endpoint monitoring,
+firewall management, threat intelligence, and incident-monitoring solutions.
+
+I work effectively in multidisciplinary teams, communicate technical information clearly, support
+users, document systems, and adapt quickly to new technologies and operational environments.
+
+---
+
+## Education
+
+| Degree | Institution | Location | Date |
+|---|---|---|---|
+| M.Sc. Computer Engineering | Fırat University | Elazığ, Türkiye | June 2026 |
+| B.Sc. Computer Engineering | Karadeniz Technical University | Trabzon, Türkiye | July 2024 |
+| Secondary Education | Şeyh Sufi İmam Hatibi | Mogadishu, Somalia | May 2017 |
+| Middle School | Tadaamun Primary and Secondary School | Mogadishu, Somalia | May 2013 |
+
+---
+
+## Experience
+
+### Software Developer Intern — Elasoft
+**Trabzon, Türkiye · January 2024 – May 2024**
+
+Backend-focused contributor to a production real-estate management platform.
+
+- Developed the Real Estate Website project using **ASP.NET Core API 8.0** and **Dapper**, working
+  primarily on the backend.
+- Designed and implemented a **three-layer architecture** — Admin Panel, Agent Interface, and User
+  Interface — integrated through a RESTful API.
+- Built frontend components with HTML, CSS, JavaScript, and a Bootstrap theme.
+- Integrated **SignalR** for instant messaging between agents and users.
+- Worked with Microsoft SQL Server for data access and query optimisation.
+
+**Stack:** C# · ASP.NET Core 8.0 · Dapper · Microsoft SQL Server · SignalR · Bootstrap
+
+### Online Instructor (Volunteer)
+**Remote · December 2024 – May 2025**
+
+Mentorship and hands-on training for beginner students in programming and applied data science.
+
+- Conducted online training sessions on **Python programming** at basic level.
+- Delivered introductory **Data Science and Analytics** content.
+- Covered Scikit-learn and supervised learning — k-NN, SVM, Logistic Regression, Decision Trees,
+  Random Forest, Naive Bayes.
+- Introduced **Artificial Neural Networks (ANNs)**, including architecture, activation functions,
+  and classification methods.
+- Designed and delivered hands-on exercises and mini-projects so students could apply theory in
+  practice.
+
+---
+
+## Master's Thesis
+
+**Automatic Question Generation from Educational Materials using a T5-based Natural Language
+Processing Approach**
+
+Applied transformer-based NLP models (T5) to automatic question generation from educational texts,
+aiming to enhance intelligent tutoring systems and low-resource language education.
+
+**Key skills:** Natural Language Processing · Transformer Models · Question Generation ·
+Educational Technology · Low-Resource Language Applications
+
+---
+
+## Research Projects
+
+### TÜBİTAK-Funded Project No. 124E787
+**Lane Marking Estimation on Unmarked Straight Roads for Autonomous Driving**
+Supervised by Dr. Gürkan Doğan. Contributed to dataset preparation, labelling, algorithm
+development, and experimental evaluation.
+
+---
+
+## Postgraduate Projects & Research Datasets
+
+- **Extractive and Abstractive Summarization in Somali Language** — Designed and implemented
+  summarization models for Somali using both extractive and abstractive NLP approaches.
+- **MDocAgent: A Multi-Modal Multi-Agent Framework for Document Understanding** — Research project
+  coordinating OCR, vision, and language components for document reasoning.
+- **Deepfake Video Detection using ResNeXt50 and LSTM** — Hybrid deep learning architecture
+  combining ResNeXt50 with LSTM for temporal feature extraction in video analysis.
+- **Text Extraction from Images using Hybrid Deep Learning** — Hybrid model integrating CNN and
+  OCR-based components to extract text from complex visual scenes.
+- **Human Bone Fracture Classification (HBFMID)** — CNN-based model classifying fracture types on
+  the Human Bone Fractures Multi-modal Image Dataset.
+- **Image Classification using CNN** — Convolutional Neural Network pipelines for image
+  classification tasks.
+- **Automated Government Tender Scraper for EKAP** — Python scraping system (Playwright, Pandas)
+  extracting real-time public procurement data from the Turkish EKAP portal into clean Excel output.
+- **Somali News Classification Dataset (SNCD)** — Balanced Somali-language news headline dataset for
+  text classification in low-resource settings, labelled Politics, World, Sports, and Economy.
+- **Fake News Analysis Dataset (Turkish Texts)** — Turkish news articles labelled TRUE/FALSE for
+  machine learning applications in fake news detection.
+- **Data Analysis with the Starbucks Nutrition Dataset (Kaggle)** — Preprocessing, visualization, and
+  statistical analysis using Pandas and Matplotlib.
+
+---
+
+## Cybersecurity Projects
+
+- **Security Operations Center (SOC) Architecture** — Open-source SOC built with Wazuh, Elastic
+  Stack, Suricata, and pfSense to monitor and protect critical
