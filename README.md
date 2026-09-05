@@ -41,10 +41,10 @@ I work effectively in multidisciplinary teams, communicate technical information
 | Middle School | Tadaamun Primary and Secondary School | Mogadishu, Somalia | May 2013 |
 
 ### Relevant Coursework (B.Sc. in Computer Engineering)
-- **Algorithms & Core Computing:** Data Structures (AA), Algorithms (BB), Object-Oriented Programming (BA), Automata Theory (BA), Discrete Mathematics (AA)
-- **AI, Data & Mathematical Foundations:** Data Mining, Probability and Statistics (BB), Numerical Analysis (BB), Signals and Systems (BA)
-- **Systems, Networks & Security:** Operating Systems (BB), Database Management, Computer Networks, System Programming (BA), Computer Network Programming, Parallel Computers (BB)
-- **Applied Software & Engineering:** Web Programming, Medical Imaging Systems (BB), Robot Technologies (BA), Computer Graphics, Hardware Description Languages (BB), Final Project (AA)
+- **Algorithms & Core Computing:** Data Structures , Algorithms , Object-Oriented Programming , Automata Theory, Discrete Mathematics
+- **AI, Data & Mathematical Foundations:** Data Mining, Probability and Statistics, Numerical Analysis, Signals and Systems
+- **Systems, Networks & Security:** Operating Systems, Database Management, Computer Networks, System Programming, Computer Network Programming, Parallel Computers (BB)
+- **Applied Software & Engineering:** Web Programming, Medical Imaging Systems, Robot Technologies, Computer Graphics, Hardware Description Languages,  
 
 ---
 
@@ -123,7 +123,7 @@ Supervised by Dr. Gürkan Doğan. Contributed to dataset preparation, labelling,
 
 ## Undergraduate Projects
 
-### Real-Time Vehicle Tracking & Fleet Management System — Graduation Project
+### Real-Time Vehicle Tracking & Fleet Management System  Graduation Project
 
 - **Hardware architecture:** Mobile tracking unit built by interfacing an Arduino Leonardo microcontroller with a GPS module for NMEA telemetry capture and a GSM/GPRS shield for cellular field data transmission.
 - **Firmware & telemetry:** Embedded C/C++ firmware using AT commands to establish GPRS network bearers, packaging tracking metrics (latitude, longitude, speed, timestamp) into payloads.
