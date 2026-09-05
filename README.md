@@ -43,7 +43,7 @@ I work effectively in multidisciplinary teams, communicate technical information
 ### Relevant Coursework (B.Sc. in Computer Engineering)
 - **Algorithms & Core Computing:** Data Structures , Algorithms , Object-Oriented Programming , Automata Theory, Discrete Mathematics
 - **AI, Data & Mathematical Foundations:** Data Mining, Probability and Statistics, Numerical Analysis, Signals and Systems
-- **Systems, Networks & Security:** Operating Systems, Database Management, Computer Networks, System Programming, Computer Network Programming, Parallel Computers (BB)
+- **Systems, Networks & Security:** Operating Systems, Database Management, Computer Networks, System Programming, Computer Network Programming, Parallel Computers
 - **Applied Software & Engineering:** Web Programming, Medical Imaging Systems, Robot Technologies, Computer Graphics, Hardware Description Languages,  
 
 ---
