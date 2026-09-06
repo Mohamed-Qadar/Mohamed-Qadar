@@ -1,220 +1,689 @@
+<!-- ========================================================= -->
+<!--                    PROFILE HEADER                         -->
+<!-- ========================================================= -->
+
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3000&pause=1000&color=1A73E8&center=true&vCenter=true&width=820&lines=Hi+there%2C+I'm+Mohamed+Ibrahim+Abdi;AI+%26+NLP+Researcher;Full-Stack+Software+Engineer;Cybersecurity+Practitioner" alt="Typing SVG" />
+  <img
+    src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3000&pause=1000&color=1A73E8&center=true&vCenter=true&width=900&lines=Hi+there%2C+I'm+Mohamed+Ibrahim+Abdi;Computer+Engineer;AI+%26+NLP+Researcher;Software+%26+Backend+Engineer;Cybersecurity+Practitioner"
+    alt="Typing SVG"
+  />
 </p>
 
 <h1 align="center">Mohamed Ibrahim Abdi</h1>
 
 <p align="center">
-  <b>M.Sc. Computer Engineering</b> · Fırat University &nbsp;|&nbsp; <b>B.Sc. Computer Engineering</b> · Karadeniz Technical University<br/>
-  Natural Language Processing · Computer Vision · Full-Stack Development · Cybersecurity
+  <b>M.Sc. Computer Engineering</b> · Fırat University
+  &nbsp;|&nbsp;
+  <b>B.Sc. Computer Engineering</b> · Karadeniz Technical University
 </p>
 
 <p align="center">
-  <a href="mailto:mohamedqadar280@gmail.com"><img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://tr.linkedin.com/in/mohamed-ibrahim-abdi-572475232"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="https://github.com/Mohamed-Qadar"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-  <a href="https://orcid.org/0009-0002-7874-8740"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" /></a>
-  <a href="https://scholar.google.com/citations?user=0yqZjd4AAAAJ&hl=en"><img src="https://img.shields.io/badge/Google_Scholar-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white" /></a>
+  <b>Artificial Intelligence</b> ·
+  <b>Natural Language Processing</b> ·
+  <b>Computer Vision</b> ·
+  <b>Backend & Full-Stack Development</b> ·
+  <b>Cybersecurity</b>
+</p>
+
+<!-- ========================================================= -->
+<!--                       CONTACT ROW                          -->
+<!-- ========================================================= -->
+
+<p align="center">
+  <a href="mailto:mohamedqadar280@gmail.com">
+    <img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+
+  <a href="https://orcid.org/0009-0002-7874-8740">
+    <img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" />
+  </a>
+
+  <a href="https://scholar.google.com/citations?user=0yqZjd4AAAAJ&hl=en">
+    <img src="https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white" />
+  </a>
+
+  <a href="https://www.kaggle.com/mohamedibrahimabdi/datasets">
+    <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://tr.linkedin.com/in/mohamed-ibrahim-abdi-572475232">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+
+  <a href="https://github.com/Mohamed-Qadar">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+
+  <img src="https://img.shields.io/badge/Location-Mogadishu%2C%20Somalia-D84315?style=for-the-badge&logo=googlemaps&logoColor=white" />
 </p>
 
 ---
 
-## About Me
+# 👨‍💻 About Me
 
-I am a Computer Engineer holding an M.Sc. in Computer Engineering from Fırat University and a B.Sc. from Karadeniz Technical University, combining full-stack software development, cybersecurity, IT systems, database technologies, and applied artificial intelligence. I have hands-on experience designing and building secure backend services, RESTful APIs, responsive web applications, real-time systems, database-driven platforms, and technical monitoring solutions.
+I am a **Computer Engineer** with an **M.Sc. from Fırat University** and a **B.Sc. from Karadeniz Technical University**, with multidisciplinary experience across:
 
-My research focuses on Natural Language Processing, transformer-based language models, multilingual and low-resource language processing, automatic question generation, text classification, computer vision, image processing, and deep learning.
+- 🤖 Artificial Intelligence and Natural Language Processing
+- 🧠 Transformer-based language models
+- 👁️ Computer Vision and Deep Learning
+- 💻 Backend and Full-Stack Software Development
+- 🔐 Cybersecurity and Security Monitoring
+- 🌐 Computer Networks and Systems
+- 📡 Embedded Systems, IoT and GSM/GPRS applications
 
-My cybersecurity work covers SOC architectures, vulnerability assessment, endpoint monitoring, firewall management, threat intelligence, and incident-monitoring solutions.
+My research work focuses on **low-resource language processing, automatic question generation, biomedical NLP, Somali-language NLP, deepfake detection, and autonomous-driving computer vision**.
 
-I work effectively in multidisciplinary teams, communicate technical information clearly, support users, document systems, and adapt quickly to new technologies and operational environments.
-
----
-
-## Education
-
-| Degree | Institution | Location | Date |
-|---|---|---|---|
-| M.Sc. Computer Engineering | Fırat University | Elazığ, Türkiye | June 2026 |
-| B.Sc. Computer Engineering | Karadeniz Technical University | Trabzon, Türkiye | July 2024 |
-| Secondary Education | Şeyh Sufi İmam Hatibi | Mogadishu, Somalia | May 2017 |
-| Middle School | Tadaamun Primary and Secondary School | Mogadishu, Somalia | May 2013 |
-
-### Relevant Coursework (B.Sc. in Computer Engineering)
-- **Algorithms & Core Computing:** Data Structures , Algorithms , Object-Oriented Programming , Automata Theory, Discrete Mathematics
-- **AI, Data & Mathematical Foundations:** Data Mining, Probability and Statistics, Numerical Analysis, Signals and Systems
-- **Systems, Networks & Security:** Operating Systems, Database Management, Computer Networks, System Programming, Computer Network Programming, Parallel Computers
-- **Applied Software & Engineering:** Web Programming, Medical Imaging Systems, Robot Technologies, Computer Graphics, Hardware Description Languages,  
+Alongside research, I build software systems using **C#, ASP.NET Core, Python, Node.js, Django, React, SQL Server, PostgreSQL, REST APIs and Docker**.
 
 ---
 
-## Experience
+# 🎓 Education
 
-### Software Developer Intern — Elasoft
-**Trabzon, Türkiye · January 2024 – May 2024**
+### 🎓 M.Sc. in Computer Engineering
+**Fırat University — Elazığ, Türkiye**  
+**Graduated: June 2026**
 
-Backend-focused contributor to a production real-estate management platform.
+**Master's Thesis:**  
+*Automatic Question Generation from Educational Materials Using a T5-Based Natural Language Processing Approach*
 
-- Developed the Real Estate Website project using **ASP.NET Core API 8.0** and **Dapper**, working primarily on the backend.
-- Designed and implemented a **three-layer architecture** — Admin Panel, Agent Interface, and User Interface — integrated through a RESTful API.
-- Built frontend components with HTML, CSS, JavaScript, and a Bootstrap theme.
-- Integrated **SignalR** for instant messaging between agents and users.
-- Worked with Microsoft SQL Server for data access and query optimisation.
-
-**Stack:** C# · ASP.NET Core 8.0 · Dapper · Microsoft SQL Server · SignalR · Bootstrap
-
-### Online Instructor (Volunteer)
-**Remote · December 2024 – May 2025**
-
-Mentorship and hands-on training for beginner students in programming and applied data science.
-
-- Conducted online training sessions on **Python programming** at basic level.
-- Delivered introductory **Data Science and Analytics** content.
-- Covered Scikit-learn and supervised learning — k-NN, SVM, Logistic Regression, Decision Trees, Random Forest, Naive Bayes.
-- Introduced **Artificial Neural Networks (ANNs)**, including architecture, activation functions, and classification methods.
-- Designed and delivered hands-on exercises and mini-projects so students could apply theory in practice.
+**Research Areas**
+- Natural Language Processing
+- Transformer Models
+- Automatic Question Generation
+- Generative AI
+- Low-Resource Language Processing
+- Model Evaluation
 
 ---
 
-## Master's Thesis
+### 🎓 B.Sc. in Computer Engineering
+**Karadeniz Technical University — Trabzon, Türkiye**  
+**Graduated: July 2024**
 
-**Automatic Question Generation from Educational Materials using a T5-based Natural Language Processing Approach**
+### Relevant Computer Engineering Coursework
 
-Applied transformer-based NLP models (T5) to automatic question generation from educational texts, aiming to enhance intelligent tutoring systems and low-resource language education.
+**Computer Science & Programming**
+- Data Structures
+- Algorithms
+- Object-Oriented Programming
+- Programming Languages
+- Automata Theory
+- Discrete Mathematics
 
-**Key skills:** Natural Language Processing · Transformer Models · Question Generation · Educational Technology · Low-Resource Language Applications
+**Computer Systems & Hardware**
+- Computer Architecture
+- Microprocessors
+- Digital Design
+- Digital Design Laboratory
+- Electric & Electronic Circuits
+- Computer Organization
+- Hardware Description Languages
 
----
+**Software, Databases & Networks**
+- Operating Systems
+- Database Management
+- Computer Networks
+- System Programming
+- Computer Network Programming
+- Web Programming
+- Windows Programming
+- Parallel Computers
 
-## Research Projects
+**Data, Mathematics & Signals**
+- Probability and Statistics
+- Engineering Mathematics
+- Differential Equations
+- Numerical Analysis
+- Signals and Systems
+- Data Mining
 
-### TÜBİTAK-Funded Project No. 124E787
-**Lane Marking Estimation on Unmarked Straight Roads for Autonomous Driving**  
-Supervised by Dr. Gürkan Doğan. Contributed to dataset preparation, labelling, algorithm development, and experimental evaluation.
-
----
-
-## Postgraduate Projects & Research Datasets
-
-- **Extractive and Abstractive Summarization in Somali Language** — Designed and implemented summarization models for Somali using both extractive and abstractive NLP approaches.
-- **MDocAgent: A Multi-Modal Multi-Agent Framework for Document Understanding** — Research project coordinating OCR, vision, and language components for document reasoning.
-- **Deepfake Video Detection using ResNeXt50 and LSTM** — Hybrid deep learning architecture combining ResNeXt50 with LSTM for temporal feature extraction in video analysis.
-- **Text Extraction from Images using Hybrid Deep Learning** — Hybrid model integrating CNN and OCR-based components to extract text from complex visual scenes.
-- **Human Bone Fracture Classification (HBFMID)** — CNN-based model classifying fracture types on the Human Bone Fractures Multi-modal Image Dataset.
-- **Image Classification using CNN** — Convolutional Neural Network pipelines for image classification tasks.
-- **Automated Government Tender Scraper for EKAP** — Python scraping system (Playwright, Pandas) extracting real-time public procurement data from the Turkish EKAP portal into clean Excel output.
-- **Somali News Classification Dataset (SNCD)** — Balanced Somali-language news headline dataset for text classification in low-resource settings, labelled Politics, World, Sports, and Economy.
-- **Fake News Analysis Dataset (Turkish Texts)** — Turkish news articles labelled TRUE/FALSE for machine learning applications in fake news detection.
-- **Data Analysis with the Starbucks Nutrition Dataset (Kaggle)** — Preprocessing, visualization, and statistical analysis using Pandas and Matplotlib.
-
----
-
-## Cybersecurity Projects
-
-- **Security Operations Center (SOC) Architecture** — Open-source SOC built with Wazuh, Elastic Stack, Suricata, and pfSense to monitor and protect critical infrastructure in low-resource environments.
-- **Automated Vulnerability Scanning Platform** — Detects common web vulnerabilities including SQL Injection and Remote Code Execution, with remediation guidance aligned to OWASP standards.
-- **Web Application Security Hardening** — ModSecurity WAF deployment with custom OWASP rules and two-factor authentication enforced for administrative access.
-- **Lightweight Endpoint Detection and Response (EDR)** — Customised Wazuh agents monitoring file integrity, unauthorised access attempts, and suspicious processes on legacy and low-resource systems.
-- **Real-Time Threat Intelligence Framework** — Cowrie honeypots with AbuseIPDB integration and instant SMS and Telegram notification for security incidents.
-- **Offensive and Defensive Cybersecurity Lab** — Virtual environment on Kali Linux and Ubuntu simulating phishing, reverse shells, and DDoS scenarios, with documented defence strategies for training.
-- **Incident Monitoring and Alert Dashboard** — Colour-coded (green / yellow / red) dashboard letting non-technical managers read system status and security alerts at a glance.
-
----
-
-## Undergraduate Projects
-
-### Real-Time Vehicle Tracking & Fleet Management System  Graduation Project
-
-- **Hardware architecture:** Mobile tracking unit built by interfacing an Arduino Leonardo microcontroller with a GPS module for NMEA telemetry capture and a GSM/GPRS shield for cellular field data transmission.
-- **Firmware & telemetry:** Embedded C/C++ firmware using AT commands to establish GPRS network bearers, packaging tracking metrics (latitude, longitude, speed, timestamp) into payloads.
-- **Backend & data pipeline:** High-throughput Node.js REST API listening continuously for incoming cellular streams, parsing and structure-validating coordinates for storage.
-- **Web & mobile dashboards:** Responsive React application with live geospatial mapping, rendering real-time vehicle markers and seamless UI state updates without page refreshes.
-
-**Key skills:** Embedded Systems · IoT Architecture · GPRS/GSM Communication · AT Commands · Node.js · React · Geospatial Mapping · RESTful APIs
-
-### Other Projects
-
-- **Real Estate Website** — Three-tier platform (Admin, Agent, API) using C#, ASP.NET Core 8.0, Dapper, SQL Server, and SignalR for real-time communication.
-- **Automata Theory Project** — GUI application converting Regular Expressions into NFA and DFA, built in Python.
-- **Local Network Client-Server Socket Communication** — Client-server system using socket programming for local networks.
-- **Telephone Central Circuit Design** — Digital circuit in VHDL simulating telephone exchange operations.
-- **Employee Health Status Tracking System (COVID-19)** — Database system for employee health records using PostgreSQL and Python.
-- **Responsive Website Development** — Fully responsive site built with HTML, CSS, and JavaScript.
-- **Weather App & Console Games** — Weather application in Python and Tkinter; Rock-Paper-Scissors game and socket-based messaging application developed as team projects.
+**Applied Computer Engineering**
+- Computer Graphics
+- Medical Imaging Systems
+- Robot Technologies
+- Engineering Design
 
 ---
 
-## Publications
+# 🔬 Research Experience
 
-### Journal — Published
+## TÜBİTAK-Funded Research Project — No. 124E787
 
-- **Muhammad Ibrahim, Burhan Ergen** (2025). Facial Expression Based Emotion Recognition. *Journal of Electrical Engineering and Computer (JEECOM)*. [DOI](https://doi.org/10.33650/jeecom.v7i1.11069)
-- **Yardımcı, N., Abdi, M. I., Ergen, B.** (2025). Hibrit ResNeXt ve LSTM Mimarisi Kullanılarak Deepfake Video Algılama. *Politeknik Dergisi*. [DOI](https://doi.org/10.2339/politeknik.1721371)
+### Lane Marking Estimation on Unmarked Straight Roads for Autonomous Driving
 
-### Journal — Under Review
+Contributed to a funded computer-vision research project focused on:
 
-- **Abdi, M. I., Ergen, B.** (2026). Multilingual Transformer Models for Medical Question Generation in Low-Resource Turkish Clinical Texts. *Balkan Journal of Electrical and Computer Engineering*.
-- **Doğan, G., Abdi, M. I., Yılmaz, B., Ergen, B.** (2026). A New Convolutional Neural Network-Based Approach for Lane Line Estimation Leveraging Selective Kernel-Based Cross Feature Fusion. *Engineering Applications of Artificial Intelligence*.
-- **Doğan, G., Abdi, M. I., Yılmaz, B., Ergen, B.** (2026). A New Lightweight Network for Drivable Area Segmentation and Heuristic Lane Boundary Estimation on Unmarked Roads. *Neurocomputing (Elsevier)*.
-- **Abdi, M. I., Yardımcı, N., Ergen, B.** (2026). Hybrid BERT-LSTM Model for Turkish Fake News Detection. *Gazi University Journal of Science*.
+- Lane-line estimation
+- Drivable-area segmentation
+- Autonomous-driving perception
+- Dataset preparation
+- Image annotation
+- Algorithm development
+- Experimental evaluation
 
-### Conference
+### Research Team
 
-- **Abdi, M. I., Ergen, B.** (2026). Classification of Somali News Headlines Using Classical Machine Learning. *9th International Mediterranean Scientific Research Congress*, Adana, Türkiye, April 29–30, 2026.
-- **Abdi, M. I., Ergen, B.** (2026). Instruction-Tuned FLAN-T5 for Generative Biomedical QA in Low-Resource Settings. *International Informatics Congress 2026 (IIC2026)*, Batman, Türkiye, April 29 – May 1, 2026.
-
----
-
-## Technical Skills
-
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=python,cs,cpp,c,kotlin,dotnet,django,react,vue,nodejs,ts,js,html,css,bootstrap,tailwind" height="42" />
-</p>
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,postgres,mssql,mysql,docker,git,github,linux,postman,azure,aws" height="42" />
-</p>
-
-| Area | Technologies |
+| Researcher | Institution |
 |---|---|
-| **Programming Languages** | Python, C, C++, C#, Kotlin |
-| **Backend & APIs** | ASP.NET Core 8, REST APIs, Node.js, SignalR, Dapper, Django |
-| **Web Technologies** | HTML, CSS, JavaScript, TypeScript, React, Vue.js, Bootstrap |
-| **Databases** | Microsoft SQL Server, PostgreSQL, relational data modelling, SQL, database integration |
-| **Data Science & ML** | NumPy, Pandas, Matplotlib, Scikit-learn, TensorFlow, Keras |
-| **Cloud** | Google Colab, Microsoft Azure, AWS (basic) |
-| **DevOps & Version Control** | Docker, Docker Compose, Git, GitHub, Postman, Swagger/OpenAPI |
-| **Specialisation** | Deep Learning, Computer Vision, Natural Language Processing, AI in Education |
-| **Tools** | LaTeX, Overleaf, Visual Studio, VS Code, Canva, MS Office, Google Workspace |
-| **Research** | Dataset preparation, model evaluation, academic writing, literature review, experiment design, reproducible research |
+| **Gürkan Doğan** | Munzur University |
+| **Mohamed Ibrahim Abdi** | Fırat University |
+| **Berkin Yılmaz** | Yeditepe University |
+| **Burhan Ergen** | Fırat University |
+
+The work contributed to journal manuscripts in **lane-line estimation** and **drivable-area segmentation**.
 
 ---
 
-## Languages
+# 🤖 AI, NLP & Computer Vision
+
+<p>
+  <img src="https://img.shields.io/badge/NLP-6A1B9A?style=flat-square" />
+  <img src="https://img.shields.io/badge/Transformers-FFD21E?style=flat-square&logo=huggingface&logoColor=black" />
+  <img src="https://img.shields.io/badge/Computer%20Vision-1565C0?style=flat-square" />
+  <img src="https://img.shields.io/badge/Deep%20Learning-D32F2F?style=flat-square" />
+  <img src="https://img.shields.io/badge/Low--Resource%20NLP-00897B?style=flat-square" />
+</p>
+
+## 🧠 Automatic Question Generation with T5
+
+**Technologies:** Python · Hugging Face · T5-base · T5-large · NLP
+
+- Developed an end-to-end question-generation research workflow.
+- Fine-tuned and compared **T5-base** and **T5-large**.
+- Implemented data preprocessing, training, validation and inference.
+- Evaluated generated questions using:
+  - BLEU
+  - ROUGE
+  - METEOR
+  - BERTScore
+
+---
+
+## 🇸🇴 Somali News Classification Dataset — SNCD
+
+**21,020 Somali-language news headlines**
+
+Balanced across:
+
+- Politics
+- World
+- Sports
+- Economy
+
+Each category contains **5,255 samples**.
+
+The dataset was designed for **low-resource Somali NLP research and text classification**.
+
+🔗 [View Repository](https://github.com/Mohamed-Qadar/Somali-News-Classification-Dataset)
+
+---
+
+## 🧬 Biomedical Question Generation
+
+**Technologies:** FLAN-T5 · Generative NLP · Biomedical QA
+
+- Investigated instruction-tuned transformer models.
+- Worked on biomedical question generation.
+- Conducted preprocessing, generation and evaluation.
+- Presented related research at the **International Informatics Congress 2026**.
+
+---
+
+## 🎥 Deepfake Video Detection
+
+**Technologies:** ResNeXt50 · LSTM · Deep Learning
+
+Developed and researched a hybrid model combining:
+
+- **ResNeXt50** for spatial feature extraction
+- **LSTM** for temporal sequence modelling
+
+The work contributed to a peer-reviewed journal publication.
+
+---
+
+## 📝 Somali Text Summarization
+
+Explored:
+
+- Extractive summarization
+- Abstractive summarization
+- Somali-language NLP
+- Low-resource text processing
+
+---
+
+## 🦴 Human Bone Fracture Classification
+
+**Technologies:** CNN · Medical Imaging · Deep Learning
+
+Developed a CNN-based workflow for classifying fracture categories using the **Human Bone Fractures Multi-modal Image Dataset (HBFMID)**.
+
+---
+
+## 🖼️ Text Extraction from Images
+
+Explored hybrid methods combining:
+
+- CNN-based visual processing
+- OCR
+- Deep Learning
+- Image-to-text extraction
+
+---
+
+# 💻 Software Engineering
+
+<p>
+  <img src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white" />
+  <img src="https://img.shields.io/badge/ASP.NET%20Core-512BD4?style=flat-square&logo=dotnet&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" />
+</p>
+
+## 🏢 Real Estate Management Platform
+
+**Stack:**  
+C# · ASP.NET Core 8 · Dapper · Microsoft SQL Server · SignalR · JavaScript · Bootstrap
+
+Developed during my Software Developer Internship at **Elasoft**.
+
+Key components:
+
+- RESTful API backend
+- Administrator interface
+- Real-estate agent interface
+- User-facing interface
+- SQL Server database
+- Dapper data access
+- Real-time communication using SignalR
+
+🔗 [View Repository](https://github.com/Mohamed-Qadar/Dapper_Api)
+
+---
+
+## 🚗 Real-Time Vehicle Tracking & Fleet Management System
+
+**Graduation Project**
+
+**Stack:**  
+Arduino · C/C++ · GPS · GSM/GPRS · AT Commands · Node.js · React · REST API
+
+Designed an end-to-end system integrating:
+
+### Embedded Hardware
+- Arduino Leonardo
+- GPS module
+- GSM/GPRS module
+
+### Telemetry
+- Latitude
+- Longitude
+- Speed
+- Timestamp
+
+### Backend
+- Node.js REST API
+- Incoming telemetry validation
+- Data processing
+
+### Frontend
+- React dashboard
+- Real-time vehicle locations
+- Geospatial mapping
+
+---
+
+## 🏛️ Automated Government Tender Scraper — EKAP
+
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
+</p>
+
+Developed a browser automation system for extracting public procurement information from Türkiye's **EKAP** platform.
+
+Features include:
+
+- Dynamic search
+- Province filtering
+- Tender-status filtering
+- Headless execution
+- CLI configuration
+- Structured tender extraction
+- Automated Excel export
+- Pandas/OpenPyXL reporting
+
+🔗 [View Repository](https://github.com/Mohamed-Qadar/Automated-Government-Tender-Scraper-for-EKAP)
+
+---
+
+## 🌐 Client–Server Network Communication
+
+Built a socket-based client/server communication application for local networks.
+
+**Topics**
+- Socket programming
+- Client/server architecture
+- Network communication
+- Message exchange
+
+---
+
+## 🔄 Automata Theory Application
+
+Developed a Python GUI for converting:
+
+**Regular Expression → NFA → DFA**
+
+Applied theoretical computer-science concepts in a working application.
+
+---
+
+# 🔐 Cybersecurity
+
+<p>
+  <img src="https://img.shields.io/badge/Wazuh-005571?style=flat-square" />
+  <img src="https://img.shields.io/badge/Suricata-EF6C00?style=flat-square" />
+  <img src="https://img.shields.io/badge/pfSense-212121?style=flat-square" />
+  <img src="https://img.shields.io/badge/OWASP-000000?style=flat-square&logo=owasp&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kali%20Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white" />
+</p>
+
+## 🛡️ Open-Source SOC Architecture
+
+Designed a security monitoring architecture using:
+
+- Wazuh
+- Elastic Stack
+- Suricata
+- pfSense
+
+Focused on security monitoring for **resource-constrained and critical-infrastructure environments**.
+
+---
+
+## 🔍 Automated Vulnerability Assessment Platform
+
+Developed a security-testing platform targeting common web application vulnerabilities including:
+
+- SQL Injection
+- Remote Code Execution
+- Common web vulnerabilities
+
+Integrated security recommendations based on **OWASP guidance**.
+
+---
+
+## 🌐 Web Application Security Hardening
+
+Worked with:
+
+- ModSecurity WAF
+- OWASP rules
+- Two-factor authentication
+- Secure administrative access
+
+---
+
+## 🖥️ Endpoint Monitoring / EDR
+
+Used Wazuh agents to monitor:
+
+- File integrity
+- Unauthorized access attempts
+- Suspicious processes
+- Endpoint events
+
+---
+
+## 🍯 Threat Intelligence & Honeypots
+
+Built a threat-monitoring workflow using:
+
+- Cowrie honeypots
+- AbuseIPDB
+- Telegram alerts
+- SMS notifications
+
+---
+
+## ⚔️ Offensive & Defensive Security Lab
+
+Built Kali Linux / Ubuntu lab environments for controlled security exercises involving:
+
+- Phishing simulation
+- Reverse shells
+- DDoS scenarios
+- Detection and defensive analysis
+
+---
+
+# 🧑‍🏫 Professional Experience
+
+## Software Developer Intern — Elasoft
+**Trabzon, Türkiye | Jan 2024 – May 2024**
+
+- Backend development with **C# and ASP.NET Core 8**
+- RESTful APIs
+- Dapper
+- Microsoft SQL Server
+- SignalR
+- JavaScript
+- Bootstrap
+
+---
+
+## Online Programming Instructor — Volunteer
+**Dec 2024 – May 2025**
+
+Delivered training in:
+
+- Python
+- Data Science
+- Scikit-learn
+- k-NN
+- SVM
+- Logistic Regression
+- Decision Trees
+- Random Forest
+- Naive Bayes
+- Artificial Neural Networks
+
+---
+
+# 📚 Publications
+
+## Peer-Reviewed Journal Articles
+
+### 1. Facial Expression Based Emotion Recognition
+**Mohamad Ibrahim, Burhan Ergen**  
+*Journal of Electrical Engineering and Computer (JEECOM), 2025*
+
+[![DOI](https://img.shields.io/badge/DOI-10.33650%2Fjeecom.v7i1.11069-007ACC?style=flat-square)](https://doi.org/10.33650/jeecom.v7i1.11069)
+
+---
+
+### 2. Hybrid ResNeXt and LSTM Architecture for Deepfake Video Detection
+**Nurcan Yardımcı, Mohamed Ibrahim Abdi, Burhan Ergen**  
+*Politeknik Dergisi, 2025*
+
+[![DOI](https://img.shields.io/badge/DOI-10.2339%2Fpoliteknik.1721371-007ACC?style=flat-square)](https://doi.org/10.2339/politeknik.1721371)
+
+---
+
+## Conference Papers
+
+### Classification of Somali News Headlines Using Classical Machine Learning
+
+**Mohamed Ibrahim Abdi, Burhan Ergen**  
+9th International Mediterranean Scientific Research Congress  
+Adana, Türkiye — April 2026
+
+---
+
+### Instruction-Tuned FLAN-T5 for Generative Biomedical QA in Low-Resource Settings
+
+**Mohamed Ibrahim Abdi, Burhan Ergen**  
+International Informatics Congress 2026  
+Batman, Türkiye — April–May 2026
+
+---
+
+## Manuscripts Under Review
+
+- **Multilingual Transformer Models for Medical Question Generation in Low-Resource Turkish Clinical Texts**
+- **A New Convolutional Neural Network-Based Approach for Lane Line Estimation Leveraging Selective Kernel-Based Cross Feature Fusion**
+- **A New Lightweight Network for Drivable Area Segmentation and Heuristic Lane Boundary Estimation on Unmarked Roads**
+- **Hybrid BERT-LSTM Model for Turkish Fake News Detection**
+
+---
+
+# 🛠️ Technical Skills
+
+## Programming Languages
+
+<p>
+  <img src="https://skillicons.dev/icons?i=python,cs,cpp,c,js,ts" />
+</p>
+
+**Python · C# · C · C++ · JavaScript · TypeScript**
+
+---
+
+## Backend Development
+
+<p>
+  <img src="https://skillicons.dev/icons?i=dotnet,django,nodejs" />
+</p>
+
+**ASP.NET Core · Django · Node.js · REST APIs · SignalR · Dapper**
+
+---
+
+## Frontend Development
+
+<p>
+  <img src="https://skillicons.dev/icons?i=react,html,css,js,ts,bootstrap" />
+</p>
+
+**React · HTML · CSS · JavaScript · TypeScript · Bootstrap**
+
+---
+
+## Databases
+
+<p>
+  <img src="https://skillicons.dev/icons?i=postgres,mysql" />
+</p>
+
+**Microsoft SQL Server · PostgreSQL · SQL · Relational Data Modelling**
+
+---
+
+## AI & Machine Learning
+
+<p>
+  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,python" />
+</p>
+
+- Natural Language Processing
+- Transformer Models
+- Deep Learning
+- Computer Vision
+- Text Classification
+- Question Generation
+- Sequence Modelling
+- Scikit-learn
+- TensorFlow
+- Keras
+- Hugging Face Transformers
+- Pandas
+- NumPy
+
+---
+
+## DevOps & Tools
+
+<p>
+  <img src="https://skillicons.dev/icons?i=docker,git,github,linux,vscode,visualstudio,postman" />
+</p>
+
+**Docker · Docker Compose · Git · GitHub · Linux · Visual Studio · VS Code · Postman**
+
+---
+
+## Cybersecurity
+
+- Wazuh
+- Suricata
+- pfSense
+- ModSecurity
+- OWASP
+- Cowrie Honeypot
+- AbuseIPDB
+- Kali Linux
+- Security Monitoring
+- Endpoint Monitoring
+- Vulnerability Assessment
+
+---
+
+# 🌍 Languages
 
 | Language | Level |
 |---|---|
-| Somali | Native |
-| English | Excellent |
-| Turkish | Excellent |
-| Arabic | Good |
+| 🇸🇴 Somali | Native |
+| 🇬🇧 English | Excellent |
+| 🇹🇷 Turkish | Excellent |
+| 🇸🇦 Arabic | Good |
 
 ---
 
-## References
-
-- **Prof. Dr. Abdullahi Abdi Omar** — Lecturer, Somali National University *(Academic Mentor)*
-- **Prof. Dr. Burhan Ergen** — Director, Institute of Natural and Applied Sciences, Fırat University *(M.Sc. Supervisor)*
-- **Prof. Dr. Bekir Dizdaroğlu** — Vice Chair, Department of Computer Engineering, Karadeniz Technical University *(B.Sc. Supervisor)*
-- **Prof. Dr. Cemal Köse** — Lecturer, Karadeniz Technical University *(Collaborator, Network and Internet Project)*
-- **Dr. Gürkan Doğan** — Lecturer, Munzur University *(Collaborator, TÜBİTAK Project)*
-- **Eng. Abdullahi Ibrahim Abdi** — Chief Technical Officer, Blue Sky Energy; Lecturer, Somali National University *(Collaborator, Software Development Projects)*
-
-*Contact details for references are available upon request.*
-
----
+# 📊 GitHub Activity
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=Mohamed-Qadar&theme=tokyonight" width="48%" alt="GitHub streak" />
+  <img
+    width="49%"
+    src="https://github-readme-stats.vercel.app/api?username=Mohamed-Qadar&show_icons=true&theme=transparent&hide_border=true"
+  />
+  <img
+    width="49%"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mohamed-Qadar&layout=compact&theme=transparent&hide_border=true"
+  />
 </p>
 
-<p align="center"><b>Thank you for visiting my profile.</b></p>
+<p align="center">
+  <img
+    src="https://streak-stats.demolab.com?user=Mohamed-Qadar&theme=transparent&hide_border=true"
+  />
+</p>
+
+---
+
+# 🤝 Let's Connect
+
+<p align="center">
+
+  <a href="mailto:mohamedqadar280@gmail.com">
+    <img src="https://img.shields.io/badge/Email%20Me-0078D4?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+
+  <a href="https://tr.linkedin.com/in/mohamed-ibrahim-abdi-572475232">
+    <img src="https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+
+  <a href="https://scholar.google.com/citations?user=0yqZjd4AAAAJ&hl=en">
+    <img src="https://img.shields.io/badge/View%20Research-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white" />
+  </a>
+
+</p>
+
+<p align="center">
+  <b>Computer Engineering · AI · Software · Cybersecurity</b>
+</p>
