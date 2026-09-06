@@ -1,7 +1,5 @@
-<h1 align="center">Mohamed Ibrahim Abdi</h1>
-
 <p align="center">
-  <b>Computer Engineer | Artificial Intelligence, NLP & Research</b>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=2800&pause=1000&color=1A73E8&center=true&vCenter=true&width=850&lines=Mohamed+Ibrahim+Abdi;Computer+Engineer;AI+%26+NLP+Researcher;Full-Stack+Software+Engineer" alt="Typing SVG" />
 </p>
 
 <p align="center">
